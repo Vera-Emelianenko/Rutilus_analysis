@@ -1,0 +1,129 @@
+GroupID	Species	Country, locality	Sample	Coordinates
+Outgroup	Pelasgus laconicus	Greece 	BL1	
+Outgroup	Squalius orientalis	Georgia 2016	ML147	
+Outgroup	Squalius turcicus	Azerbaijan 2012	AZ59	
+none	Pseudophoxinus atropatenus	Azerbaijan 2017	ZR159	
+none	Pseudophoxinus atropatenus	Azerbaijan 2017	ZR211	
+none	Pseudophoxinus atropatenus	Azerbaijan 2017	ZR254	
+none	Pseudophoxinus atropatenus	Azerbaijan 2017	ZR222	
+1	Rutilus aula	Croatia, Baštica river	RUAU2	
+1	Rutilus aula	Croatia, Baštica river	RUAU3	N 44°11'42.37 E 15°24'32.13   70 m asl
+1	Rutilus aula	Croatia, Baštica river	RUAU4	N 44°11'42.37 E 15°24'32.13   70 m asl
+1	Rutilus aula	Croatia, Baštica river	RUAU5	N 44°11'42.37 E 15°24'32.13   70 m asl
+2	Rutilus basak	Bosnia and Herzegovina, Neretva	RUBA1	
+2	Rutilus basak	Bosnia and Herzegovina, Neretva	RUBA2	
+2	Rutilus basak	Bosnia and Herzegovina, Neretva	RUBA3	
+2	Rutilus basak	Bosnia and Herzegovina, Neretva	RUBA4	
+3	Rutilus caspicus	Azerbaijan, Caspian Sea	ZR7	
+3	Rutilus caspicus	Azerbaijan, Caspian Sea	AZ12	
+3	Rutilus caspicus	Azerbaijan, Caspian Sea	AZ127	
+3	Rutilus caspicus	Russia, Lower Volga, Volgograd	G41	
+4	Rutilus frisii	Bulgaria	D946	
+5	Rutilus frisii kutum	Azerbaijan, Caspian Sea	AZ18	
+5	Rutilus frisii kutum	Azerbaijan, Caspian Sea	AZ26	
+5	Rutilus frisii kutum	Azerbaijan, Caspian Sea	ZR6	
+5	Rutilus frisii kutum	Russia, Kaspiysk	RFK1	
+5	Rutilus frisii kutum	Russia, Kaspiysk	RK2	
+5	Rutilus frisii kutum (with mtDNA from Rutilus caspicus)	Azerbaijan 2012	AZ25	
+6	Rutilus heckelii	Russia, Azov Sea	386	
+6	Rutilus heckelii	Russia, Azov Sea	326	
+6	Rutilus heckelii	Russia, Don River at Stupino	RM101	
+7	Rutilus lacustris	Russia, Yamal, Venuimusyakha Rutilus	RL1	
+7	Rutilus lacustris	Russia, Yamal, Venuimusyakha Rutilus	RL2	
+7	Rutilus lacustris	Russia, Ubse-Nur Lake, Yakutia	GA237	
+7	Rutilus lacustris	Russia, Okunevoe Lake, Lena system	G447	
+7	Rutilus lacustris	Russia, Okunevoe Lake, Lena system	G448	
+7	Rutilus lacustris	Russia, Saratovskoe Res. On Volga	G408	
+7	Rutilus lacustris	Russia, Lake Nero	G482	
+7	Rutilus lacustris	Russia, Yenisey Rutilus	G424	
+7	Rutilus lacustris	Russia, Yenisey Rutilus	G426	
+7	Rutilus lacustris	Russia, Lena basin	G455	
+7	Rutilus lacustris	Russia, Ob basin	G341	
+7	Rutilus lacustris	Russia, Yenisey basin	G431	
+8	Rutilus lacustris aralensis	Kazakhstan 2010	K101	
+8	Rutilus lacustris aralensis	Tajikistan, Syrdarja Rutilus	TA144	
+8	Rutilus lacustris aralensis	Tajikistan, Syrdarja Rutilus	TA145	
+8	Rutilus lacustris aralensis	Tajikistan, Syrdarja Rutilus	TA170	
+8	Rutilus lacustris aralensis	Kazakhstan 2010	K100	
+9	Rutilus meidingeri	Austria	Fish684	
+9	Rutilus meidingeri	Austria	Fish698	
+10	Rutilus ohridanus	Albania, Ohrid lake	D3784	
+10	Rutilus ohridanus	Albania, Ohrid lake	D3785	
+10	Rutilus ohridanus	Albania, Skadar lake	RUOH1	
+10	Rutilus ohridanus	Albania, Skadar lake	RUOH2	
+11	Rutilus panosi	Greece, Lake Trichonis	D2173	
+11	Rutilus panosi	Greece, Lake Trichonis	D2174	
+11	Rutilus panosi	Greece, Amvrakia Lake, Acheloos	RUPA1	
+11	Rutilus panosi	Greece, Amvrakia Lake, Acheloos	RUPA2	
+12	Rutilus pigus	Italy, Lago di Como	1197A	
+12	Rutilus pigus	Italy, Lago di Como	1197B	
+12	Rutilus pigus	Italy, Lago di Como	1197C	
+12	Rutilus pigus	Italy, Lago di Como	1197D	
+13	Rutilus prespensis	Albania, Prespa Lake	D281	
+13	Rutilus prespensis	Albania, Prespa Lake	D282	N40°53´22.9´  E20°55´44.9´  850 m asl
+13	Rutilus prespensis	Albania, Prespa Lake	D283	N40°53´22.9´  E20°55´44.9´  850 m asl
+13	Rutilus prespensis	Albania, Prespa Lake	D284	N40°53´22.9´  E20°55´44.9´  850 m asl
+14	Rutilus rubilio	Italy, Tiber	RURU1	
+14	Rutilus rubilio	Italy, Tiber	RURU2	
+14	Rutilus rubilio	Italy, Tiber	RURU3	
+14	Rutilus rubilio	Italy, Tiber	RURU4	
+15	Rutilus rutilus	France, Tech Rutilus, Ortafa	D2808	
+15	Rutilus rutilus	Greece, Vegoritis Lake	K1080	
+15	Rutilus rutilus	Greece, Vegoritis Lake	K1082	
+15	Rutilus rutilus	Finland, Lake Akas	12ARO2	
+15	Rutilus rutilus	Finland, Lake Akas	12ARO6	
+15	Rutilus rutilus	Finland, Lake Toras	12TRO18	
+15	Rutilus rutilus	Finland, Lake Vaatto	13VAAR038	
+15	Rutilus rutilus	Finland, Lake Rattos	13RAR04	
+15	Rutilus rutilus	Finland, Lake Rattos	13RAR016	
+15	Rutilus rutilus	Finland, Lake Kattilajärvi	K1	
+15	Rutilus rutilus	Finland, Lake Veckjärvi	V1	
+15	Rutilus rutilus	Finland, Lake Veckjärvi	V2	
+15	Rutilus rutilus	Finand, Lake Hiidenvesi	H1	
+15	Rutilus rutilus	Finand, Lake Hiidenvesi	H2	
+15	Rutilus rutilus	Russia, Baltiysk	G211	
+15	Rutilus rutilus	Russia, Gdansky Bay	G212	
+15	Rutilus rutilus	Ukraine, Dnieper Rutilus	G261	
+15	Rutilus rutilus	Ukraine, Dnieper Rutilus	G263	
+15	Rutilus rutilus	Ukraine, Southern Bug Rutilus	G291	
+15	Rutilus rutilus	Ukraine, Southern Bug Rutilus	G292	
+15	Rutilus rutilus	Croatia, Kupa Rutilus, Sava-Danube	A1292	
+15	Rutilus rutilus	Croatia, Drava-Danube	D1528	
+15	Rutilus rutilus	Slovakia, Jaziernica, Danube	H1495	
+15	Rutilus rutilus	Slovakia, Jaziernica, Danube	H1496	
+15	Rutilus rutilus	Czech Republic, Pamětník, Elbe	J974	
+15	Rutilus rutilus	Czech Republic, Pamětník, Elbe	J975	
+15	Rutilus rutilus	Russia, Rybinsk Res., Upper Volga	Pr19	
+15	Rutilus rutilus 	GB Nene Rutilus	GB13	
+15	Rutilus rutilus 	GB Nene Rutilus	GB15	
+15	Rutilus rutilus 	GB Nene Rutilus	GB16	
+15	Rutilus rutilus 	GB Aire Rutilus	GB36	
+15	Rutilus rutilus 	GB Aire Rutilus	GB42	
+15	Rutilus rutilus 	Greece, Evros Rutilus	C1901	
+15	Rutilus rutilus 	Greece, Evros Rutilus	C1899	
+15	Rutilus rutilus 	Greece, Evros Rutilus	C1898	
+15	Rutilus rutilus 	Greece, Evros Rutilus	C1897	
+15	Rutilus rutilus 	Croatia, Drava-Danube	D1550	
+15	Rutilus rutilus 	Croatia, Drava-Danube	D1695	
+15	Rutilus rutilus 	Bosnia & Herzeg., Vrbas-Dabube	A1473	
+15	Rutilus rutilus 	Bosnia & Herzeg., Vrbas-Dabube	A1474	
+15	Rutilus rutilus 	Russia, Vyazma Rutilus, Dnieper bas.	G337	
+15	Rutilus rutilus 	Russia, Arkhangelsk, White Sea bas.	252	
+15	Rutilus rutilus (with mtDNA from Rutilus caspicus)	Russia, Upper Volga	Pr12	
+16	Rutilus shelkovnikovi	Armenia, Mezamor Rutilus	AR10	
+16	Rutilus shelkovnikovi	Armenia, Mezamor Rutilus	AR24	
+16	Rutilus shelkovnikovi	Armenia, Mezamor Rutilus	AR51	
+16	Rutilus shelkovnikovi	Armenia, Mezamor Rutilus	AR50	
+17	Rutilus sp.	Greece, Lamia, Sperchios	D2018	
+17	Rutilus sp.	Greece, Lamia, Sperchios	D2019	
+17	Rutilus sp.	Greece, Lamia, Sperchios	D2020	
+17	Rutilus sp.	Greece, Lamia, Sperchios	RUSP1	
+18	Rutilus stomboudae	Greece, Volvi Lake	GA128	
+19	Rutilus virgo	Croatia, Una river, Sava, Danube	C44	
+19	Rutilus virgo	Croatia, Una river, Sava, Danube	C45	
+19	Rutilus virgo	Croatia, Una river, Sava, Danube	C46	
+19	Rutilus virgo	Croatia, Una river, Sava, Danube	C47	
+20	Rutilus ylikiensis	Greece, Lake Yliki	D2073	
+20	Rutilus ylikiensis	Greece, Lake Yliki	D2074	
+20	Rutilus ylikiensis	Greece, Lake Yliki	D2075	
+20	Rutilus ylikiensis	Greece, Lake Yliki	D2076	

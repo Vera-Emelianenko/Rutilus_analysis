@@ -1,0 +1,87 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r setup, include=FALSE}
+load_packages <- function(package_name)
+  {
+    if (!require(package_name, character.only = TRUE))
+    {
+      install.packages(package_name)
+      library(package_name, character.only = TRUE)
+    }
+    else
+    {
+      library(package_name, character.only = TRUE)
+    }
+        
+  }
+
+
+Packages = c('dplyr', 'data.table', 'magrittr', 'ggplot2', "plotly", 'tidyverse') 
+invisible(lapply(Packages, load_packages))
+
+# Setup knitr defaults with standard formatting changes
+knitr::opts_chunk$set(
+	echo = T,
+	message = F,
+	eval = T,
+	fig.show = "markup",
+	include = T,
+	warning = F,
+	results = "markup",
+	tidy = T             
+)
+
+## Empty workspace ##
+rm(list=ls())
+
+```
+
+
+```{r load data}
+reads_data <- data.table::fread('read_counts.tsv') %>% dplyr::rename('Sample'='file')%>% dplyr::select('Sample', 'count')%>%
+  dplyr::arrange('Sample')
+
+
+popmap_data <- data.table::fread('Rutilus_RAD_2018_2020_species_attr.csv')  
+
+popmap_reads <- left_join(reads_data, popmap_data, by='Sample')
+popmap_reads$Sample = as.factor (popmap_reads$Sample)
+```
+
+
+```{r plot reads count according to group}
+plot1 <- ggplot(data = popmap_reads,  aes(x = GroupID, y = count, color = GroupID)) + geom_point(aes(shape = Sample))+geom_boxplot(alpha = 0.3, aes(fill =GroupID ))+theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+ggplotly(plot1)
+```
+
+
+```{r create popmap for parameter optimization}
+popmap_reads_filtered <- popmap_reads %>%distinct() %>% dplyr::filter(!is.na(GroupID) & GroupID!= 'Outgroup' & GroupID!= 'none')%>%arrange(GroupID)
+popmap_reads_filtered_mean <- left_join (popmap_reads_filtered, popmap_reads_filtered %>% dplyr::group_by(GroupID) %>% dplyr::summarize(mean_value = mean(count)), by = c ('GroupID'))
+popmap_reads_filtered_mean %<>% dplyr::mutate(dif = (count - mean_value)^2) 
+popmap_reads_sliced <- popmap_reads_filtered_mean%>%distinct() %>% dplyr::group_by(GroupID)  %>% slice_min(dif, n = 2)
+                                        
+plot2 <- ggplot(data = popmap_reads_filtered_mean) + 
+  geom_point(aes(x = GroupID, y = count, color = GroupID, group = Sample))+
+  geom_point(aes(x = GroupID, y = mean_value),  color = 'black', fill ='black')+
+  geom_boxplot(alpha = 0.3, aes(x = GroupID, y = count, color = GroupID, fill =GroupID ))+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  geom_point(data = popmap_reads_sliced, aes(x = GroupID, y = count, shape = Sample, group = sqrt(dif)), color = 'red')
+
+ggplotly(plot2)
+
+```
+
+
+
+```{r write down test popmap}
+popmap_reads_sliced %>% dplyr::select(Sample, GroupID) %>% write.table(file='test_popmap.tsv', quote=FALSE, sep='\t', row.names = FALSE, col.names = FALSE)
+```
+
