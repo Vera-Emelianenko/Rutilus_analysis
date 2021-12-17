@@ -1,0 +1,47 @@
+populations v2.59, executed 2021-12-17 00:14:30 (zlib-1.2.11)
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/populations -P ./stacks45.m6 -O ./stacks45.m6/populations.r80 -r 0.80 -t 30 --popmap ../info/test_popmap_onepop.tsv
+Locus/sample distributions will be written to './stacks45.m6/populations.r80/populations.log.distribs'.
+populations parameters selected:
+  Percent samples limit per population: 0.8
+  Locus Population limit: 1
+  Percent samples overall: 0
+  Minor allele frequency cutoff: 0
+  Maximum observed heterozygosity cutoff: 1
+  Applying Fst correction: none.
+  Pi/Fis kernel smoothing: off
+  Fstats kernel smoothing: off
+  Bootstrap resampling: off
+
+Parsing population map...
+The population map contained 38 samples, 1 population(s), 1 group(s).
+Working on 38 samples.
+Working on 1 population(s):
+    population: 1197B, 1197C, 326, 386, AR24, AR50, AZ12, AZ26, C46, C47, D2019, D2073, D2075, D2173, D2174, D282, D283, D946, Fish684, Fish698, 
+                G41, G448, GA128, GA237, GB15, RK2, RUAU2, RUAU4, RUBA3, RUBA4, RUOH1, RUOH2, RURU3, RURU4, RUSP1, TA144, TA145, V2
+Working on 1 group(s) of populations:
+    defaultgrp: population
+
+Raw haplotypes will be written to './stacks45.m6/populations.r80/populations.haplotypes.tsv'
+Population-level summary statistics will be written to './stacks45.m6/populations.r80/populations.sumstats.tsv'
+Population-level haplotype summary statistics will be written to './stacks45.m6/populations.r80/populations.hapstats.tsv'
+
+Processing data in batches:
+  * load a batch of catalog loci and apply filters
+  * compute SNP- and haplotype-wise per-population statistics
+  * write the above statistics in the output files
+  * export the genotypes/haplotypes in specified format(s)
+More details in './stacks45.m6/populations.r80/populations.log.distribs'.
+Now processing...
+Batch 1 
+
+Removed 525512 loci that did not pass sample/population constraints from 528992 loci.
+Kept 3480 loci, composed of 1039408 sites; 12891 of those sites were filtered, 14226 variant sites remained.
+Number of loci with PE contig: 3480.00 (100.0%);
+  Mean length of loci: 288.68bp (stderr 0.43);
+Number of loci with SE/PE overlap: 1070.00 (30.7%);
+  Mean length of overlapping loci: 292.65bp (stderr 0.52); mean overlap: 18.72bp (stderr 0.17);
+Mean genotyped sites per locus: 292.24bp (stderr 0.43).
+
+Population summary statistics (more detail in populations.sumstats_summary.tsv):
+  population: 33.211 samples per locus; pi: 0.088122; all/variant/polymorphic sites: 1016994/14226/14226; private alleles: 0
+Populations is done.

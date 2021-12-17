@@ -83,5 +83,8 @@ ggplotly(plot2)
 
 ```{r write down test popmap}
 popmap_reads_sliced %>% dplyr::select(Sample, GroupID) %>% write.table(file='test_popmap.tsv', quote=FALSE, sep='\t', row.names = FALSE, col.names = FALSE)
+
+
+popmap_reads_sliced %>% dplyr::select(Sample, GroupID) %>% dplyr::mutate(GroupID='population') %>% write.table(file='test_popmap_onepop.tsv', quote=FALSE, sep='\t', row.names = FALSE, col.names = FALSE)
 ```
 

@@ -1,0 +1,205 @@
+---
+title: "R Plots Rutilus"
+output: html_notebook
+---
+
+
+```{r setup, include=FALSE}
+
+## Package Loading ## 
+# for each package, check if it's installed and if not, install it
+
+load_packages <- function(package_name)
+  {
+    if (!require(package_name, character.only = TRUE))
+    {
+      install.packages(package_name)
+      library(package_name, character.only = TRUE)
+    }
+    else
+    {
+      library(package_name, character.only = TRUE)
+    }
+        
+  }
+
+
+Packages = c('dplyr', 'data.table', 'magrittr', 'ggplot2', 'ggpubr', 'plotly', 'plyr', 'tidyr', 'cowplot') 
+invisible(lapply(Packages, load_packages))
+
+
+# Setup knitr defaults with standard formatting changes
+knitr::opts_chunk$set(
+	echo = T,
+	message = F,
+	eval = T,
+	fig.show = "markup",
+	include = T,
+	warning = F,
+	results = "markup",
+	tidy = T             
+)
+
+## Empty workspace ##
+rm(list=ls())
+
+new_theme <- theme_bw() + theme (
+         panel.grid = element_blank(),
+         plot.title = element_text(hjust = 0.5, vjust = 0, size = 12), #place title in the center and ajust the size
+         plot.subtitle = element_text(hjust = 0.5, size = 10),#place subtitle in the center
+         axis.title = element_text(size = 14), 
+         axis.text = element_text(size = 14),
+         axis.title.y = element_text(margin = margin(t = 0, r = 8, b = 0, l = 0)), #place title of the y axis not that close to the numbers
+         axis.ticks = element_blank(),#remove ticks
+         panel.border = element_blank(), #remove panel border 
+         axis.line = element_line(size = 0.01, color ='#A9A9A9' ), #make axis thin and gray
+         legend.position="right", 
+         legend.text = element_text(size=8.5), #adjust legend text
+         legend.title = element_text(size = 9), #adjust legend title
+         legend.key.size = unit(0.8, "lines"), #adjust spacing between legend items - crucial if I want to make the whole legend smaller and not just the text
+         plot.margin=unit(c(0.5,0.5,0.5,0.5),"cm"), #make margins so that all the legend is inside the plot area 
+         aspect.ratio = 1/1.3)
+theme_set(new_theme)
+```
+
+# m parameter variation
+## m parameter coverage boxplot
+
+First, I want to plot the coverage for different values of m. For this, I am first going to use bash commands (grep, awk, sed, cat) and then read the table into R and use ggplot. 
+
+coverage_tables_m.sh script: 
+
+```
+##!/bin/bash
+
+for m in 1 2 3 4 5 6 7 8 9 10
+do
+	cat stacks45.m.summary/stacks45.m$m/denovo_map.log | egrep -i '^Sample [0-9]|Stack coverage: mean=|Final coverage: mean='| sed "s/'/=/g" |  sed "s/;/=/g"| awk '{print $2}' FS='=' | xargs -n3 -d'\n' | sed "s/ /,/g" | sed -e "s/^/$m,/" > ./coverage_table_m$m.csv
+done
+cat coverage_table_m*.csv > coverage_table_m.csv
+rm coverage_table_m?*.csv
+```
+
+
+```{r m parameter coverage create tables}
+# running bash script from R studio
+# the same can be done from command line
+coverage_tables_m <- 'bash /mnt/c/Users/emeli/Documents/Rutilus_analysis/tests.denovo/coverage_tables_m.sh'
+system(coverage_tables_m)
+```
+
+```{r m parameter coverage read table}
+m_table <- data.table::fread("./coverage_table_m.csv")%>% 
+  # make the variables factors 
+  dplyr::mutate_at(
+    vars(V1,V2),      
+    list(factor)     
+    )%>%
+  # rename columns
+  dplyr::rename(
+    m = V1, 
+    sample = V2, 
+    initial_cov = V3, 
+    final_cov = V4
+    )
+# reshape table into long 
+m_table%<>%gather(., "cov_type", "coverage", 3:4)
+
+```
+
+
+```{r m parameter coverage boxplot}
+colors = c("#6FBF55", "#9C89BD")
+popmap = data.table::fread("./test_popmap.tsv")
+n_samples = popmap %>% nrow()
+
+m_cov_box<- ggplot(m_table, aes(y=coverage, x=m)) +
+  geom_boxplot(
+    alpha=0.2, 
+    outlier.shape = NA, 
+    aes(fill = cov_type), 
+    position=position_dodge(0.6), 
+    width = 0.4)+
+  geom_point(
+    position = position_jitterdodge(0.3), 
+    alpha = 0.8, 
+    size = 0.8, 
+    aes(fill = cov_type, color = cov_type)) +
+  theme (
+    legend.position="none", 
+    aspect.ratio = 1/2, 
+    panel.grid.major.y = element_line(size = 0.1, color = '#d3d3d3'))+  
+  labs(y = "coverage", 
+       x = 'm',
+       title = 'Coverage from denovo_map Rutilus, "Stack coverage" and "Final coverage"', 
+       subtitle = paste("M=2, n=0,", n_samples, "samples from all populations")) +
+  scale_fill_manual(values = colors)+
+  scale_color_manual(values = colors)+
+  scale_y_continuous(breaks = c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70), limits=c(0,75))
+
+m_cov_box
+
+ggsave(filename = './pics/fig1_boxplot_m_coverage.png', plot = m_cov_box,
+    width = 20, height = 13, units = c("cm"),
+    dpi = 300, limitsize = FALSE)
+```
+
+
+Now I want to plot snp per locus and total number of polymorphic loci. 
+
+```
+##!/bin/bash
+
+for m in 1 2 3 4 5 6 7 8 9 10
+do
+	cat stacks45.m.summary/stacks45.m$m/populations.r80/populations.log.distribs| sed -n '/^BEGIN snps_per_loc_postfilters/,${p;/^END/q}' | sed '1d;2d;3d;$d'| sed -e "s/^/$m\t/"  > ./snps_per_locus_m$m.tsv
+done
+cat snps_per_locus_m*.tsv > snps_per_locus_m.tsv
+rm snps_per_locus_m?*.tsv
+```
+
+
+```{r m parameter snp create tables}
+# running bash script from R studio
+# the same can be done from command line
+snps_per_locus_m <- 'bash /mnt/c/Users/emeli/Documents/Rutilus_analysis/tests.denovo/snps_per_locus_m.sh'
+system(snps_per_locus_m)
+```
+
+
+## m parameter snp per locus barplot
+```{r m parameter snp per locus read table}
+m_snp_table <- data.table::fread("./snps_per_locus_m.tsv")%>% 
+  # rename columns
+  dplyr::rename(
+    m = V1, 
+    n_snps = V2, 
+    n_loci = V3
+    )%>% 
+  # make the variables factors 
+  dplyr::mutate_at(
+    vars(m, n_snps),      
+    list(factor)     
+    )
+```
+
+```{r m parameter snp per locus barplot}
+library("viridis")          
+colors = viridis(10)
+m_snp_bar <- ggplot(m_snp_table , aes(y=n_loci/1000, x=n_snps, fill=m)) +
+  geom_col(position=position_dodge(0.8))+  #position=position_dodge(0.8), width = 0.6
+  labs(y = "n_loci (K)", 
+       x = 'n_snps',
+       title = 'snps per locus postfilters, Rutilus, from "populations.log.distribs"', 
+       subtitle = paste("M=2, n=0,", n_samples, "samples from all populations"))+
+  scale_fill_manual(values = colors )+
+  scale_y_continuous(breaks = c(0, 2, 4, 6, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55)) +
+  theme (panel.grid.major.y = element_line(size = 0.001, color = '#d3d3d3'), 
+         axis.text = element_text(size = 9))
+  
+  m_snp_bar
+
+ggsave(filename = './pics/fig2_barplot_m_snp_per_locus.png', plot = m_snp_bar ,
+    width = 20, height = 13, units = c("cm"),
+    dpi = 300, limitsize = FALSE)
+```

@@ -1,0 +1,282 @@
+# Note: Individual distributions can be extracted using the `stacks-dist-extract` utility.
+#       e.g. `stacks-dist-extract populations.log.distribs dist_name`
+
+BEGIN batch_progress
+Batch 1: analyzed 3480 loci; filtered 525512 loci; 528992 loci seen.
+END batch_progress
+
+BEGIN samples_per_loc_prefilters
+# Distribution of valid samples matched to a catalog locus prior to filtering.
+n_samples	n_loci
+1	253032
+2	93461
+3	48492
+4	31810
+5	19030
+6	13655
+7	10498
+8	7710
+9	6274
+10	5385
+11	4586
+12	3993
+13	3436
+14	2890
+15	2346
+16	2081
+17	1866
+18	1731
+19	1616
+20	1451
+21	1364
+22	1233
+23	1157
+24	1057
+25	992
+26	1006
+27	840
+28	857
+29	841
+30	822
+31	696
+32	600
+33	561
+34	442
+35	435
+36	357
+37	226
+38	163
+END samples_per_loc_prefilters
+
+BEGIN missing_samples_per_loc_prefilters
+# Distribution of missing samples for each catalog locus prior to filtering.
+# Absent samples at locus	Count
+0	163
+1	226
+2	357
+3	435
+4	442
+5	561
+6	600
+7	696
+8	822
+9	841
+10	857
+11	840
+12	1006
+13	992
+14	1057
+15	1157
+16	1233
+17	1364
+18	1451
+19	1616
+20	1731
+21	1866
+22	2081
+23	2346
+24	2890
+25	3436
+26	3993
+27	4586
+28	5385
+29	6274
+30	7710
+31	10498
+32	13655
+33	19030
+34	31810
+35	48492
+36	93461
+37	253032
+END missing_samples_per_loc_prefilters
+
+BEGIN snps_per_loc_prefilters
+# Distribution of the number of SNPs per catalog locus prior to filtering.
+n_snps	n_loci
+0	358970
+1	55661
+2	31821
+3	21363
+4	15373
+5	11596
+6	8664
+7	6524
+8	4889
+9	3651
+10	2708
+11	1998
+12	1469
+13	1088
+14	799
+15	542
+16	471
+17	342
+18	250
+19	174
+20	154
+21	103
+22	82
+23	52
+24	48
+25	40
+26	34
+27	23
+28	18
+29	18
+30	14
+31	11
+32	4
+33	6
+34	3
+35	4
+36	4
+37	4
+38	4
+39	2
+40	1
+41	2
+42	2
+43	1
+44	1
+45	3
+53	1
+END snps_per_loc_prefilters
+
+BEGIN samples_per_loc_postfilters
+# Distribution of valid samples matched to a catalog locus after filtering.
+n_samples	n_loci
+31	696
+32	600
+33	561
+34	442
+35	435
+36	357
+37	226
+38	163
+END samples_per_loc_postfilters
+
+BEGIN missing_samples_per_loc_postfilters
+# Distribution of missing samples for each catalog locus after filtering.
+# Absent samples at locus	Count
+0	163
+1	226
+2	357
+3	435
+4	442
+5	561
+6	600
+7	696
+END missing_samples_per_loc_postfilters
+
+BEGIN snps_per_loc_postfilters
+# Distribution of the number of SNPs per catalog locus (after filtering).
+n_snps	n_loci
+0	273
+1	398
+2	486
+3	504
+4	482
+5	397
+6	301
+7	224
+8	140
+9	87
+10	77
+11	48
+12	22
+13	19
+14	11
+15	3
+16	2
+17	3
+18	1
+20	1
+25	1
+END snps_per_loc_postfilters
+
+BEGIN loci_per_sample
+# Number of loci per individual sample (after filtering).
+sample	n_loci	present_loci	missing_loci	frequency_missing
+1197B	3480	1913	1567	0.4503
+1197C	3480	1135	2345	0.6739
+326	3480	3425	55	0.0158
+386	3480	2781	699	0.2009
+AR24	3480	3318	162	0.0466
+AR50	3480	2811	669	0.1922
+AZ12	3480	3425	55	0.0158
+AZ26	3480	3420	60	0.0172
+C46	3480	2941	539	0.1549
+C47	3480	2543	937	0.2693
+D2019	3480	3265	215	0.0618
+D2073	3480	2447	1033	0.2968
+D2075	3480	3003	477	0.1371
+D2173	3480	3292	188	0.0540
+D2174	3480	3351	129	0.0371
+D282	3480	3260	220	0.0632
+D283	3480	3421	59	0.0170
+D946	3480	3218	262	0.0753
+Fish684	3480	3244	236	0.0678
+Fish698	3480	3262	218	0.0626
+G41	3480	3368	112	0.0322
+G448	3480	3351	129	0.0371
+GA128	3480	3422	58	0.0167
+GA237	3480	3405	75	0.0216
+GB15	3480	3372	108	0.0310
+RK2	3480	3244	236	0.0678
+RUAU2	3480	3063	417	0.1198
+RUAU4	3480	3394	86	0.0247
+RUBA3	3480	3334	146	0.0420
+RUBA4	3480	2883	597	0.1716
+RUOH1	3480	3003	477	0.1371
+RUOH2	3480	1907	1573	0.4520
+RURU3	3480	3410	70	0.0201
+RURU4	3480	3402	78	0.0224
+RUSP1	3480	2807	673	0.1934
+TA144	3480	3365	115	0.0330
+TA145	3480	3368	112	0.0322
+V2	3480	3377	103	0.0296
+END loci_per_sample
+
+BEGIN variant_sites_per_sample
+# Number of variant sites per individual sample (after filtering).
+sample	n_sites	present_sites	missing_sites	frequency_missing
+1197B	14226	8085	6141	0.4317
+1197C	14226	5013	9213	0.6476
+326	14226	13710	516	0.0363
+386	14226	11913	2313	0.1626
+AR24	14226	13605	621	0.0437
+AR50	14226	12026	2200	0.1546
+AZ12	14226	12935	1291	0.0907
+AZ26	14226	12753	1473	0.1035
+C46	14226	11789	2437	0.1713
+C47	14226	11130	3096	0.2176
+D2019	14226	13322	904	0.0635
+D2073	14226	10146	4080	0.2868
+D2075	14226	12261	1965	0.1381
+D2173	14226	13374	852	0.0599
+D2174	14226	13460	766	0.0538
+D282	14226	12973	1253	0.0881
+D283	14226	13031	1195	0.0840
+D946	14226	13234	992	0.0697
+Fish684	14226	13345	881	0.0619
+Fish698	14226	13451	775	0.0545
+G41	14226	13624	602	0.0423
+G448	14226	13653	573	0.0403
+GA128	14226	13118	1108	0.0779
+GA237	14226	13727	499	0.0351
+GB15	14226	13714	512	0.0360
+RK2	14226	13234	992	0.0697
+RUAU2	14226	11850	2376	0.1670
+RUAU4	14226	13375	851	0.0598
+RUBA3	14226	13406	820	0.0576
+RUBA4	14226	12125	2101	0.1477
+RUOH1	14226	12098	2128	0.1496
+RUOH2	14226	8251	5975	0.4200
+RURU3	14226	13326	900	0.0633
+RURU4	14226	13287	939	0.0660
+RUSP1	14226	11142	3084	0.2168
+TA144	14226	13684	542	0.0381
+TA145	14226	13651	575	0.0404
+V2	14226	13634	592	0.0416
+END variant_sites_per_sample
