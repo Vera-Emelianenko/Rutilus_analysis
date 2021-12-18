@@ -203,3 +203,134 @@ ggsave(filename = './pics/fig2_barplot_m_snp_per_locus.png', plot = m_snp_bar ,
     width = 20, height = 13, units = c("cm"),
     dpi = 300, limitsize = FALSE)
 ```
+
+
+Now I want to plot all assembled loci: the sum of all n_loci per one value of m. 
+
+## m parameter n_loci_assembled
+```{r m parameter n_loci table}
+# reading the same table again so that this chunk could be executed separately 
+n_loci_assembled_table <- data.table::fread("./snps_per_locus_m.tsv")%>% 
+  # rename columns
+  dplyr::rename(
+    m = V1, 
+    n_snps = V2, 
+    n_loci = V3
+    )%>% 
+  # make the variables factors 
+  dplyr::mutate_at(
+    vars(m, n_snps),      
+    list(factor)     
+    )%>%
+  # group by the factor m 
+  dplyr::group_by(m)%>%
+  # count the sum of the loci column, including even those loci where no snps were found 
+  dplyr::summarise(
+      n_loci_assembled = sum (n_loci)
+    )
+
+```
+
+To count the number of polymorphic sites, we should do the following, but without m = 0 
+
+```{r n loci polymorphic table }
+
+n_loci_polymorphic_table <- data.table::fread("./snps_per_locus_m.tsv")%>% 
+  # rename columns
+  dplyr::rename(
+    m = V1, 
+    n_snps = V2, 
+    n_loci = V3
+    )%>% 
+  # make the variables factors 
+  dplyr::mutate_at(
+    vars(m, n_snps),      
+    list(factor)     
+    )%>%
+  #filter out the cases where loci have no sps 
+  dplyr::filter(n_snps!=0)%>%
+  # group by the factor m 
+  dplyr::group_by(m)%>%
+  # count the sum of the number of loci column
+  dplyr::summarise(
+      n_loci_polymorphic = sum (n_loci)
+    )
+
+# join 2 tables: 
+
+m_loci_table <- left_join(n_loci_assembled_table  , n_loci_polymorphic_table, by = c('m'))
+
+
+```
+Plotting the values of assembled and polymorphic loci. 
+
+```{r m parameter n_loci_assembled and polymorphic dot plot }
+
+m_loci_ass_dot <- ggplot(m_loci_table, aes(y=n_loci_assembled/1000, x=m)) +
+  geom_point(size = 3) +
+  geom_point(size = 3, color = '#6B8E23', aes(y=n_loci_polymorphic/1000, x=m))+
+  theme (legend.position="none", panel.grid.major.y = element_line(size = 0.1, color = '#d3d3d3'))+  #remove legend
+  labs(y = "n_loci_assembled (K)", 
+       x = 'm',
+       title = 'Number of assembled loci from populations.log.distribs', 
+       subtitle = "M=2, n=0, r80, green - polymorphic loci") +
+  scale_y_continuous(labels = scales::comma, breaks = c(0, 10, 20, 30, 40, 50, 60, 70), limits=c(0,70))
+m_loci_ass_dot
+
+ggsave(filename = './pics/fig3_dotplot_m_assembled_polymorphic_loci.png', plot = m_loci_ass_dot,
+    width = 20, height = 12, units = c("cm"),
+    dpi = 300, limitsize = FALSE)
+
+ggplotly(m_loci_ass_dot)
+
+```
+
+## m parameter number of SNPs 
+
+```{r n loci polymorphic table }
+
+n_snps_table <- data.table::fread("./snps_per_locus_m.tsv")%>% 
+  # rename columns
+  dplyr::rename(
+    m = V1, 
+    n_snps = V2, 
+    n_loci = V3
+    )%>% 
+  # make the variables factors 
+  dplyr::mutate_at(
+    vars(m),      
+    list(factor)     
+    )%>%
+  #filter out the cases where loci have no sps 
+  dplyr::filter(n_snps!=0)%>%
+  dplyr::mutate(
+    number_of_snp = n_snps*n_loci
+  )%>%
+  # group by the factor m 
+  dplyr::group_by(m)%>%
+  # count the sum of the number of snp column
+  dplyr::summarise(
+      n_snp = sum (number_of_snp)
+    )
+
+
+
+```
+
+```{r m parameter n_snps dot plot }
+
+m_snps_dot <- ggplot(n_snps_table, aes(y=n_snp/1000, x=m)) +
+  geom_point(size = 3) +
+  theme (legend.position="none", panel.grid.major.y = element_line(size = 0.1, color = '#d3d3d3'))+  #remove legend
+  labs(y = "n_snps (K)", 
+       x = 'm',
+       title = 'Number of snps from populations.log.distribs', 
+       subtitle = "M=2, n=0, r80") +
+  scale_y_continuous(labels = scales::comma, breaks = c(0, 10, 20, 30, 40, 50, 60, 70), limits=c(0,70))
+m_snps_dot
+
+ggsave(filename = './pics/fig4_dotplot_m_snps.png', plot = m_snps_dot,
+    width = 20, height = 12, units = c("cm"),
+    dpi = 300, limitsize = FALSE)
+
+```
