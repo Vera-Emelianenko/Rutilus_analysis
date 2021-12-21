@@ -1,0 +1,3547 @@
+denovo_map.pl version 2.59 started at 2021-12-20 06:49:47
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/denovo_map.pl -m 2 -o ./stacks45.Mn8 --popmap ../info/test_popmap.tsv --samples ../../Rutilus --threads 30 -M 8 -n 8 --paired -X ustacks: --max_locus_stacks 7
+
+ustacks
+==========
+
+Sample 1 of 38 'RUAU4'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RUAU4.1.fq.gz -o ./stacks45.Mn8 -i 1 -m 2 --name RUAU4 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RUAU4.1.fq.gz'
+  Sample ID: 1
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...
+
+Loaded 4978439 reads; formed:
+  265698 stacks representing 4248071 primary reads (85.3%)
+  730368 secondary stacks representing 730368 secondary reads (14.7%)
+
+Stack coverage: mean=15.99; stdev=198.79; max=90662; n_reads=4248071(85.3%)
+Removing repetitive stacks: cov > 613 (mean+3*stdev)...
+  Blacklisted 10526 stacks.
+Coverage after repeat removal: mean=13.99; stdev=26.85; max=610; n_reads=3569770(71.7%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 255172 stacks into 138452; blacklisted 1974 stacks.
+Coverage after assembling stacks: mean=20.91; stdev=36.78; max=600; n_reads=2851170(57.3%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 506452 out of 730368 secondary reads (69.3%), 189363 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=24.63; stdev=51.27; max=10389; n_reads=3357622(67.4%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 138452 stacks into 116153 stacks.
+Coverage after gapped assembly: mean=29.44; stdev=57.28; max=10389; n_reads=3357622(67.4%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 56198 out of 223916 secondary reads (25.1%).
+Coverage after merging gapped secondary stacks: mean=29.93; stdev=58.02; max=10389; n_reads=3413820(68.6%)
+
+Final coverage: mean=29.93; stdev=58.02; max=10389; n_reads=3413820(68.6%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 2 of 38 'RUAU2'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RUAU2.1.fq.gz -o ./stacks45.Mn8 -i 2 -m 2 --name RUAU2 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RUAU2.1.fq.gz'
+  Sample ID: 2
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...
+
+Loaded 1552558 reads; formed:
+  212103 stacks representing 1137210 primary reads (73.2%)
+  415348 secondary stacks representing 415348 secondary reads (26.8%)
+
+Stack coverage: mean=5.36; stdev=38.98; max=14374; n_reads=1137210(73.2%)
+Removing repetitive stacks: cov > 123 (mean+3*stdev)...
+  Blacklisted 6950 stacks.
+Coverage after repeat removal: mean=4.70; stdev=5.39; max=122; n_reads=964694(62.1%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 205153 stacks into 133568; blacklisted 1006 stacks.
+Coverage after assembling stacks: mean=6.19; stdev=7.28; max=208; n_reads=819574(52.8%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 186170 out of 415348 secondary reads (44.8%), 62969 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=7.60; stdev=9.48; max=480; n_reads=1005744(64.8%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 133568 stacks into 115317 stacks.
+Coverage after gapped assembly: mean=8.81; stdev=10.78; max=480; n_reads=1005744(64.8%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 41635 out of 229178 secondary reads (18.2%).
+Coverage after merging gapped secondary stacks: mean=9.18; stdev=12.03; max=765; n_reads=1047379(67.5%)
+
+Final coverage: mean=9.18; stdev=12.03; max=765; n_reads=1047379(67.5%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 3 of 38 'RUOH2'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RUOH2.1.fq.gz -o ./stacks45.Mn8 -i 3 -m 2 --name RUOH2 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RUOH2.1.fq.gz'
+  Sample ID: 3
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...
+
+Loaded 846783 reads; formed:
+  75282 stacks representing 670254 primary reads (79.2%)
+  176529 secondary stacks representing 176529 secondary reads (20.8%)
+
+Stack coverage: mean=8.90; stdev=33.65; max=3792; n_reads=670254(79.2%)
+Removing repetitive stacks: cov > 110 (mean+3*stdev)...
+  Blacklisted 3383 stacks.
+Coverage after repeat removal: mean=7.93; stdev=10.10; max=110; n_reads=570233(67.3%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 71899 stacks into 49735; blacklisted 271 stacks.
+Coverage after assembling stacks: mean=10.37; stdev=13.34; max=235; n_reads=511402(60.4%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 106821 out of 176529 secondary reads (60.5%), 36312 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=12.54; stdev=16.58; max=384; n_reads=618223(73.0%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 49735 stacks into 43994 stacks.
+Coverage after gapped assembly: mean=14.19; stdev=18.28; max=390; n_reads=618223(73.0%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 13359 out of 69708 secondary reads (19.2%).
+Coverage after merging gapped secondary stacks: mean=14.49; stdev=19.20; max=523; n_reads=631582(74.6%)
+
+Final coverage: mean=14.49; stdev=19.20; max=523; n_reads=631582(74.6%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 4 of 38 'RUOH1'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RUOH1.1.fq.gz -o ./stacks45.Mn8 -i 4 -m 2 --name RUOH1 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RUOH1.1.fq.gz'
+  Sample ID: 4
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...
+
+Loaded 1030586 reads; formed:
+  87578 stacks representing 823978 primary reads (80.0%)
+  206608 secondary stacks representing 206608 secondary reads (20.0%)
+
+Stack coverage: mean=9.41; stdev=70.56; max=17637; n_reads=823978(80.0%)
+Removing repetitive stacks: cov > 222 (mean+3*stdev)...
+  Blacklisted 2974 stacks.
+Coverage after repeat removal: mean=8.28; stdev=12.29; max=222; n_reads=700810(68.0%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 84604 stacks into 55775; blacklisted 375 stacks.
+Coverage after assembling stacks: mean=10.95; stdev=16.18; max=261; n_reads=606022(58.8%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 111953 out of 206608 secondary reads (54.2%), 38563 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=12.98; stdev=19.16; max=462; n_reads=717975(69.7%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 55775 stacks into 48687 stacks.
+Coverage after gapped assembly: mean=14.88; stdev=21.34; max=462; n_reads=717975(69.7%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 16940 out of 94655 secondary reads (17.9%).
+Coverage after merging gapped secondary stacks: mean=15.23; stdev=23.21; max=1288; n_reads=734915(71.3%)
+
+Final coverage: mean=15.23; stdev=23.21; max=1288; n_reads=734915(71.3%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 5 of 38 'D2174'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/D2174.1.fq.gz -o ./stacks45.Mn8 -i 5 -m 2 --name D2174 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/D2174.1.fq.gz'
+  Sample ID: 5
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...
+
+Loaded 2086475 reads; formed:
+  117048 stacks representing 1745748 primary reads (83.7%)
+  340727 secondary stacks representing 340727 secondary reads (16.3%)
+
+Stack coverage: mean=14.91; stdev=99.13; max=24542; n_reads=1745748(83.7%)
+Removing repetitive stacks: cov > 313 (mean+3*stdev)...
+  Blacklisted 3891 stacks.
+Coverage after repeat removal: mean=13.55; stdev=24.70; max=313; n_reads=1532713(73.5%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 113157 stacks into 71562; blacklisted 571 stacks.
+Coverage after assembling stacks: mean=18.72; stdev=31.77; max=483; n_reads=1327117(63.6%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 233786 out of 340727 secondary reads (68.6%), 79047 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=22.02; stdev=36.84; max=1053; n_reads=1560903(74.8%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 71562 stacks into 62282 stacks.
+Coverage after gapped assembly: mean=25.33; stdev=40.26; max=1053; n_reads=1560903(74.8%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 27956 out of 106941 secondary reads (26.1%).
+Coverage after merging gapped secondary stacks: mean=25.79; stdev=43.97; max=3835; n_reads=1588859(76.2%)
+
+Final coverage: mean=25.79; stdev=43.97; max=3835; n_reads=1588859(76.2%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 6 of 38 'D2173'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/D2173.1.fq.gz -o ./stacks45.Mn8 -i 6 -m 2 --name D2173 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/D2173.1.fq.gz'
+  Sample ID: 6
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...
+
+Loaded 2013783 reads; formed:
+  170292 stacks representing 1620759 primary reads (80.5%)
+  393024 secondary stacks representing 393024 secondary reads (19.5%)
+
+Stack coverage: mean=9.52; stdev=47.89; max=13561; n_reads=1620759(80.5%)
+Removing repetitive stacks: cov > 154 (mean+3*stdev)...
+  Blacklisted 5137 stacks.
+Coverage after repeat removal: mean=8.63; stdev=10.65; max=154; n_reads=1424545(70.7%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 165155 stacks into 117491; blacklisted 652 stacks.
+Coverage after assembling stacks: mean=10.79; stdev=13.12; max=316; n_reads=1258676(62.5%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 198360 out of 393024 secondary reads (50.5%), 62790 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=12.49; stdev=15.55; max=723; n_reads=1457036(72.4%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 117491 stacks into 105466 stacks.
+Coverage after gapped assembly: mean=13.93; stdev=17.02; max=723; n_reads=1457036(72.4%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 34200 out of 194664 secondary reads (17.6%).
+Coverage after merging gapped secondary stacks: mean=14.25; stdev=18.52; max=1849; n_reads=1491236(74.1%)
+
+Final coverage: mean=14.25; stdev=18.52; max=1849; n_reads=1491236(74.1%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 7 of 38 '1197B'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/1197B.1.fq.gz -o ./stacks45.Mn8 -i 7 -m 2 --name 1197B -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/1197B.1.fq.gz'
+  Sample ID: 7
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...
+
+Loaded 607476 reads; formed:
+  80689 stacks representing 424628 primary reads (69.9%)
+  182848 secondary stacks representing 182848 secondary reads (30.1%)
+
+Stack coverage: mean=5.26; stdev=29.21; max=7163; n_reads=424628(69.9%)
+Removing repetitive stacks: cov > 93 (mean+3*stdev)...
+  Blacklisted 1942 stacks.
+Coverage after repeat removal: mean=4.77; stdev=4.63; max=92; n_reads=375439(61.8%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 78747 stacks into 64353; blacklisted 293 stacks.
+Coverage after assembling stacks: mean=5.22; stdev=5.48; max=167; n_reads=334155(55.0%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 64402 out of 182848 secondary reads (35.2%), 21076 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=6.23; stdev=7.50; max=335; n_reads=398557(65.6%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 64353 stacks into 60726 stacks.
+Coverage after gapped assembly: mean=6.61; stdev=8.44; max=386; n_reads=398557(65.6%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 8668 out of 118446 secondary reads (7.3%).
+Coverage after merging gapped secondary stacks: mean=6.75; stdev=8.88; max=450; n_reads=407225(67.0%)
+
+Final coverage: mean=6.75; stdev=8.88; max=450; n_reads=407225(67.0%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 8 of 38 '1197C'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/1197C.1.fq.gz -o ./stacks45.Mn8 -i 8 -m 2 --name 1197C -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/1197C.1.fq.gz'
+  Sample ID: 8
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...
+
+Loaded 385749 reads; formed:
+  57205 stacks representing 261651 primary reads (67.8%)
+  124098 secondary stacks representing 124098 secondary reads (32.2%)
+
+Stack coverage: mean=4.57; stdev=22.64; max=4644; n_reads=261651(67.8%)
+Removing repetitive stacks: cov > 73 (mean+3*stdev)...
+  Blacklisted 1327 stacks.
+Coverage after repeat removal: mean=4.17; stdev=3.71; max=71; n_reads=232753(60.3%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 55878 stacks into 47722; blacklisted 205 stacks.
+Coverage after assembling stacks: mean=4.41; stdev=4.52; max=145; n_reads=209104(54.2%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 35679 out of 124098 secondary reads (28.8%), 11639 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=5.16; stdev=6.11; max=289; n_reads=244783(63.5%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 47722 stacks into 45868 stacks.
+Coverage after gapped assembly: mean=5.37; stdev=6.71; max=307; n_reads=244783(63.5%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 4654 out of 88419 secondary reads (5.3%).
+Coverage after merging gapped secondary stacks: mean=5.47; stdev=7.16; max=345; n_reads=249437(64.7%)
+
+Final coverage: mean=5.47; stdev=7.16; max=345; n_reads=249437(64.7%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 9 of 38 'D283'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/D283.1.fq.gz -o ./stacks45.Mn8 -i 9 -m 2 --name D283 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/D283.1.fq.gz'
+  Sample ID: 9
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...
+
+Loaded 2356641 reads; formed:
+  172968 stacks representing 1925022 primary reads (81.7%)
+  431619 secondary stacks representing 431619 secondary reads (18.3%)
+
+Stack coverage: mean=11.13; stdev=75.10; max=25639; n_reads=1925022(81.7%)
+Removing repetitive stacks: cov > 237 (mean+3*stdev)...
+  Blacklisted 5482 stacks.
+Coverage after repeat removal: mean=10.15; stdev=15.82; max=236; n_reads=1700494(72.2%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 167486 stacks into 103563; blacklisted 838 stacks.
+Coverage after assembling stacks: mean=14.41; stdev=22.93; max=351; n_reads=1478070(62.7%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 276521 out of 431619 secondary reads (64.1%), 93422 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=17.10; stdev=26.90; max=928; n_reads=1754591(74.5%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 103563 stacks into 89021 stacks.
+Coverage after gapped assembly: mean=19.93; stdev=30.35; max=1011; n_reads=1754591(74.5%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 33877 out of 155098 secondary reads (21.8%).
+Coverage after merging gapped secondary stacks: mean=20.31; stdev=33.55; max=3730; n_reads=1788468(75.9%)
+
+Final coverage: mean=20.31; stdev=33.55; max=3730; n_reads=1788468(75.9%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 10 of 38 'D282'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/D282.1.fq.gz -o ./stacks45.Mn8 -i 10 -m 2 --name D282 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/D282.1.fq.gz'
+  Sample ID: 10
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...
+
+Loaded 1246616 reads; formed:
+  101141 stacks representing 993975 primary reads (79.7%)
+  252641 secondary stacks representing 252641 secondary reads (20.3%)
+
+Stack coverage: mean=9.83; stdev=64.01; max=16619; n_reads=993975(79.7%)
+Removing repetitive stacks: cov > 202 (mean+3*stdev)...
+  Blacklisted 3537 stacks.
+Coverage after repeat removal: mean=8.84; stdev=12.99; max=195; n_reads=862596(69.2%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 97604 stacks into 64788; blacklisted 423 stacks.
+Coverage after assembling stacks: mean=11.77; stdev=16.88; max=290; n_reads=756708(60.7%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 156283 out of 252641 secondary reads (61.9%), 52581 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=14.20; stdev=21.06; max=1295; n_reads=912991(73.2%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 64788 stacks into 56758 stacks.
+Coverage after gapped assembly: mean=16.23; stdev=23.24; max=1295; n_reads=912991(73.2%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 19520 out of 96358 secondary reads (20.3%).
+Coverage after merging gapped secondary stacks: mean=16.58; stdev=24.97; max=1805; n_reads=932511(74.8%)
+
+Final coverage: mean=16.58; stdev=24.97; max=1805; n_reads=932511(74.8%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 11 of 38 'RURU4'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RURU4.1.fq.gz -o ./stacks45.Mn8 -i 11 -m 2 --name RURU4 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RURU4.1.fq.gz'
+  Sample ID: 11
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...5M...6M...
+
+Loaded 6675373 reads; formed:
+  297287 stacks representing 5714023 primary reads (85.6%)
+  961350 secondary stacks representing 961350 secondary reads (14.4%)
+
+Stack coverage: mean=19.22; stdev=326.16; max=168545; n_reads=5714023(85.6%)
+Removing repetitive stacks: cov > 998 (mean+3*stdev)...
+  Blacklisted 10568 stacks.
+Coverage after repeat removal: mean=16.82; stdev=38.15; max=996; n_reads=4823299(72.3%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 286719 stacks into 159201; blacklisted 2112 stacks.
+Coverage after assembling stacks: mean=24.00; stdev=48.00; max=810; n_reads=3767741(56.4%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 628576 out of 961350 secondary reads (65.4%), 231889 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=28.00; stdev=55.11; max=2438; n_reads=4396317(65.9%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 159201 stacks into 135272 stacks.
+Coverage after gapped assembly: mean=33.04; stdev=61.60; max=2438; n_reads=4396317(65.9%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 90018 out of 332774 secondary reads (27.1%).
+Coverage after merging gapped secondary stacks: mean=33.72; stdev=67.84; max=9182; n_reads=4486335(67.2%)
+
+Final coverage: mean=33.72; stdev=67.84; max=9182; n_reads=4486335(67.2%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 12 of 38 'RURU3'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RURU3.1.fq.gz -o ./stacks45.Mn8 -i 12 -m 2 --name RURU3 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RURU3.1.fq.gz'
+  Sample ID: 12
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...5M...6M...7M...8M...
+
+Loaded 8621463 reads; formed:
+  342888 stacks representing 7418223 primary reads (86.0%)
+  1203240 secondary stacks representing 1203240 secondary reads (14.0%)
+
+Stack coverage: mean=21.63; stdev=345.00; max=188496; n_reads=7418223(86.0%)
+Removing repetitive stacks: cov > 1057 (mean+3*stdev)...
+  Blacklisted 12819 stacks.
+Coverage after repeat removal: mean=19.15; stdev=46.82; max=1044; n_reads=6322359(73.3%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 330069 stacks into 179512; blacklisted 2920 stacks.
+Coverage after assembling stacks: mean=27.50; stdev=58.80; max=964; n_reads=4852018(56.3%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 795115 out of 1203240 secondary reads (66.1%), 293092 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=32.00; stdev=67.54; max=5537; n_reads=5647133(65.5%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 179512 stacks into 152561 stacks.
+Coverage after gapped assembly: mean=37.77; stdev=75.17; max=5537; n_reads=5647133(65.5%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 131295 out of 408125 secondary reads (32.2%).
+Coverage after merging gapped secondary stacks: mean=38.65; stdev=77.63; max=5537; n_reads=5778428(67.0%)
+
+Final coverage: mean=38.65; stdev=77.63; max=5537; n_reads=5778428(67.0%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 13 of 38 'GB15'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/GB15.1.fq.gz -o ./stacks45.Mn8 -i 13 -m 2 --name GB15 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/GB15.1.fq.gz'
+  Sample ID: 13
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...
+
+Loaded 3981292 reads; formed:
+  212052 stacks representing 3429880 primary reads (86.1%)
+  551412 secondary stacks representing 551412 secondary reads (13.9%)
+
+Stack coverage: mean=16.17; stdev=101.86; max=37112; n_reads=3429880(86.1%)
+Removing repetitive stacks: cov > 322 (mean+3*stdev)...
+  Blacklisted 6198 stacks.
+Coverage after repeat removal: mean=14.60; stdev=20.97; max=320; n_reads=3005169(75.5%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 205854 stacks into 154845; blacklisted 751 stacks.
+Coverage after assembling stacks: mean=17.48; stdev=25.59; max=620; n_reads=2690918(67.6%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 289987 out of 551412 secondary reads (52.6%), 88183 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=19.37; stdev=28.25; max=739; n_reads=2980905(74.9%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 154845 stacks into 139251 stacks.
+Coverage after gapped assembly: mean=21.55; stdev=30.87; max=739; n_reads=2980905(74.9%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 28730 out of 261425 secondary reads (11.0%).
+Coverage after merging gapped secondary stacks: mean=21.76; stdev=31.23; max=842; n_reads=3009635(75.6%)
+
+Final coverage: mean=21.76; stdev=31.23; max=842; n_reads=3009635(75.6%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 14 of 38 'V2'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/V2.1.fq.gz -o ./stacks45.Mn8 -i 14 -m 2 --name V2 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/V2.1.fq.gz'
+  Sample ID: 14
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...
+
+Loaded 3977023 reads; formed:
+  238934 stacks representing 3481594 primary reads (87.5%)
+  495429 secondary stacks representing 495429 secondary reads (12.5%)
+
+Stack coverage: mean=14.57; stdev=123.83; max=37335; n_reads=3481594(87.5%)
+Removing repetitive stacks: cov > 387 (mean+3*stdev)...
+  Blacklisted 9070 stacks.
+Coverage after repeat removal: mean=12.34; stdev=20.28; max=383; n_reads=2835958(71.3%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 229864 stacks into 160246; blacklisted 1058 stacks.
+Coverage after assembling stacks: mean=15.14; stdev=24.11; max=609; n_reads=2407168(60.5%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 284981 out of 495429 secondary reads (57.5%), 95063 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=16.93; stdev=27.07; max=1097; n_reads=2692149(67.7%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 160246 stacks into 139742 stacks.
+Coverage after gapped assembly: mean=19.44; stdev=30.06; max=1102; n_reads=2692149(67.7%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 43736 out of 210448 secondary reads (20.8%).
+Coverage after merging gapped secondary stacks: mean=19.76; stdev=30.98; max=1327; n_reads=2735885(68.8%)
+
+Final coverage: mean=19.76; stdev=30.98; max=1327; n_reads=2735885(68.8%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 15 of 38 'AR50'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/AR50.1.fq.gz -o ./stacks45.Mn8 -i 15 -m 2 --name AR50 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/AR50.1.fq.gz'
+  Sample ID: 15
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...
+
+Loaded 4790376 reads; formed:
+  175352 stacks representing 4098646 primary reads (85.6%)
+  691730 secondary stacks representing 691730 secondary reads (14.4%)
+
+Stack coverage: mean=23.37; stdev=196.14; max=40195; n_reads=4098646(85.6%)
+Removing repetitive stacks: cov > 612 (mean+3*stdev)...
+  Blacklisted 11576 stacks.
+Coverage after repeat removal: mean=20.28; stdev=44.98; max=612; n_reads=3321042(69.3%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 163776 stacks into 108529; blacklisted 851 stacks.
+Coverage after assembling stacks: mean=26.28; stdev=53.33; max=839; n_reads=2825536(59.0%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 453833 out of 691730 secondary reads (65.6%), 162697 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=30.50; stdev=61.13; max=2490; n_reads=3279369(68.5%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 108529 stacks into 95797 stacks.
+Coverage after gapped assembly: mean=34.60; stdev=66.18; max=2490; n_reads=3279369(68.5%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 60033 out of 237897 secondary reads (25.2%).
+Coverage after merging gapped secondary stacks: mean=35.24; stdev=67.79; max=2491; n_reads=3339402(69.7%)
+
+Final coverage: mean=35.24; stdev=67.79; max=2491; n_reads=3339402(69.7%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 16 of 38 'AR24'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/AR24.1.fq.gz -o ./stacks45.Mn8 -i 16 -m 2 --name AR24 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/AR24.1.fq.gz'
+  Sample ID: 16
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...
+
+Loaded 4293550 reads; formed:
+  216557 stacks representing 3706665 primary reads (86.3%)
+  586885 secondary stacks representing 586885 secondary reads (13.7%)
+
+Stack coverage: mean=17.12; stdev=120.84; max=34922; n_reads=3706665(86.3%)
+Removing repetitive stacks: cov > 380 (mean+3*stdev)...
+  Blacklisted 8894 stacks.
+Coverage after repeat removal: mean=15.08; stdev=21.97; max=379; n_reads=3131703(72.9%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 207663 stacks into 156090; blacklisted 793 stacks.
+Coverage after assembling stacks: mean=17.84; stdev=25.08; max=602; n_reads=2767516(64.5%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 342097 out of 586885 secondary reads (58.3%), 100066 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=20.05; stdev=28.29; max=783; n_reads=3109613(72.4%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 156090 stacks into 140721 stacks.
+Coverage after gapped assembly: mean=22.25; stdev=30.78; max=783; n_reads=3109613(72.4%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 41990 out of 244788 secondary reads (17.2%).
+Coverage after merging gapped secondary stacks: mean=22.55; stdev=32.04; max=2122; n_reads=3151603(73.4%)
+
+Final coverage: mean=22.55; stdev=32.04; max=2122; n_reads=3151603(73.4%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 17 of 38 'RUSP1'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RUSP1.1.fq.gz -o ./stacks45.Mn8 -i 17 -m 2 --name RUSP1 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RUSP1.1.fq.gz'
+  Sample ID: 17
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...
+
+Loaded 1142158 reads; formed:
+  155301 stacks representing 797589 primary reads (69.8%)
+  344569 secondary stacks representing 344569 secondary reads (30.2%)
+
+Stack coverage: mean=5.14; stdev=24.93; max=5664; n_reads=797589(69.8%)
+Removing repetitive stacks: cov > 80 (mean+3*stdev)...
+  Blacklisted 4377 stacks.
+Coverage after repeat removal: mean=4.59; stdev=4.71; max=80; n_reads=692418(60.6%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 150924 stacks into 115101; blacklisted 585 stacks.
+Coverage after assembling stacks: mean=5.35; stdev=5.88; max=134; n_reads=611335(53.5%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 121277 out of 344569 secondary reads (35.2%), 41438 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=6.41; stdev=7.89; max=416; n_reads=732612(64.1%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 115101 stacks into 106694 stacks.
+Coverage after gapped assembly: mean=6.92; stdev=8.67; max=416; n_reads=732612(64.1%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 24443 out of 223292 secondary reads (10.9%).
+Coverage after merging gapped secondary stacks: mean=7.15; stdev=10.09; max=1220; n_reads=757055(66.3%)
+
+Final coverage: mean=7.15; stdev=10.09; max=1220; n_reads=757055(66.3%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 18 of 38 'D2019'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/D2019.1.fq.gz -o ./stacks45.Mn8 -i 18 -m 2 --name D2019 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/D2019.1.fq.gz'
+  Sample ID: 18
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...
+
+Loaded 1749047 reads; formed:
+  87449 stacks representing 1467590 primary reads (83.9%)
+  281457 secondary stacks representing 281457 secondary reads (16.1%)
+
+Stack coverage: mean=16.78; stdev=113.28; max=27358; n_reads=1467590(83.9%)
+Removing repetitive stacks: cov > 357 (mean+3*stdev)...
+  Blacklisted 3375 stacks.
+Coverage after repeat removal: mean=15.12; stdev=24.43; max=355; n_reads=1271581(72.7%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 84074 stacks into 57713; blacklisted 368 stacks.
+Coverage after assembling stacks: mean=19.57; stdev=29.08; max=489; n_reads=1121013(64.1%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 195858 out of 281457 secondary reads (69.6%), 66647 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=22.99; stdev=34.87; max=1747; n_reads=1316871(75.3%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 57713 stacks into 51531 stacks.
+Coverage after gapped assembly: mean=25.78; stdev=37.57; max=1747; n_reads=1316871(75.3%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 21315 out of 85599 secondary reads (24.9%).
+Coverage after merging gapped secondary stacks: mean=26.19; stdev=42.15; max=3994; n_reads=1338186(76.5%)
+
+Final coverage: mean=26.19; stdev=42.15; max=3994; n_reads=1338186(76.5%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 19 of 38 'GA128'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/GA128.1.fq.gz -o ./stacks45.Mn8 -i 19 -m 2 --name GA128 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/GA128.1.fq.gz'
+  Sample ID: 19
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...
+
+Loaded 3692994 reads; formed:
+  231012 stacks representing 3101306 primary reads (84.0%)
+  591688 secondary stacks representing 591688 secondary reads (16.0%)
+
+Stack coverage: mean=13.42; stdev=179.03; max=75352; n_reads=3101306(84.0%)
+Removing repetitive stacks: cov > 551 (mean+3*stdev)...
+  Blacklisted 8390 stacks.
+Coverage after repeat removal: mean=11.67; stdev=21.59; max=547; n_reads=2599065(70.4%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 222622 stacks into 124216; blacklisted 1673 stacks.
+Coverage after assembling stacks: mean=17.02; stdev=29.77; max=660; n_reads=2084173(56.4%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 386144 out of 591688 secondary reads (65.3%), 144908 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=20.17; stdev=44.57; max=9659; n_reads=2470317(66.9%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 124216 stacks into 104757 stacks.
+Coverage after gapped assembly: mean=23.99; stdev=49.77; max=9659; n_reads=2470317(66.9%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 44334 out of 205544 secondary reads (21.6%).
+Coverage after merging gapped secondary stacks: mean=24.42; stdev=50.41; max=9659; n_reads=2514651(68.1%)
+
+Final coverage: mean=24.42; stdev=50.41; max=9659; n_reads=2514651(68.1%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 20 of 38 'C46'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/C46.1.fq.gz -o ./stacks45.Mn8 -i 20 -m 2 --name C46 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/C46.1.fq.gz'
+  Sample ID: 20
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...
+
+Loaded 970633 reads; formed:
+  79678 stacks representing 798161 primary reads (82.2%)
+  172472 secondary stacks representing 172472 secondary reads (17.8%)
+
+Stack coverage: mean=10.02; stdev=124.51; max=33987; n_reads=798161(82.2%)
+Removing repetitive stacks: cov > 384 (mean+3*stdev)...
+  Blacklisted 2120 stacks.
+Coverage after repeat removal: mean=8.78; stdev=14.54; max=382; n_reads=680933(70.2%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 77558 stacks into 50590; blacklisted 391 stacks.
+Coverage after assembling stacks: mean=11.18; stdev=16.37; max=338; n_reads=560721(57.8%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 98744 out of 172472 secondary reads (57.3%), 33381 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=13.15; stdev=19.05; max=378; n_reads=659465(67.9%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 50590 stacks into 44284 stacks.
+Coverage after gapped assembly: mean=15.04; stdev=21.02; max=378; n_reads=659465(67.9%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 17592 out of 73728 secondary reads (23.9%).
+Coverage after merging gapped secondary stacks: mean=15.44; stdev=23.05; max=1269; n_reads=677057(69.8%)
+
+Final coverage: mean=15.44; stdev=23.05; max=1269; n_reads=677057(69.8%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 21 of 38 'C47'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/C47.1.fq.gz -o ./stacks45.Mn8 -i 21 -m 2 --name C47 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/C47.1.fq.gz'
+  Sample ID: 21
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...
+
+Loaded 3093116 reads; formed:
+  126417 stacks representing 2640264 primary reads (85.4%)
+  452852 secondary stacks representing 452852 secondary reads (14.6%)
+
+Stack coverage: mean=20.89; stdev=98.09; max=18124; n_reads=2640264(85.4%)
+Removing repetitive stacks: cov > 316 (mean+3*stdev)...
+  Blacklisted 8796 stacks.
+Coverage after repeat removal: mean=18.51; stdev=35.49; max=316; n_reads=2177216(70.4%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 117621 stacks into 75740; blacklisted 616 stacks.
+Coverage after assembling stacks: mean=25.45; stdev=43.67; max=680; n_reads=1905265(61.6%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 322737 out of 452852 secondary reads (71.3%), 112267 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=29.76; stdev=50.64; max=1069; n_reads=2228002(72.0%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 75740 stacks into 66127 stacks.
+Coverage after gapped assembly: mean=34.15; stdev=54.94; max=1069; n_reads=2228002(72.0%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 33096 out of 130115 secondary reads (25.4%).
+Coverage after merging gapped secondary stacks: mean=34.65; stdev=56.12; max=1466; n_reads=2261098(73.1%)
+
+Final coverage: mean=34.65; stdev=56.12; max=1466; n_reads=2261098(73.1%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 22 of 38 'RUBA3'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RUBA3.1.fq.gz -o ./stacks45.Mn8 -i 22 -m 2 --name RUBA3 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RUBA3.1.fq.gz'
+  Sample ID: 22
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...
+
+Loaded 2933103 reads; formed:
+  145115 stacks representing 2514685 primary reads (85.7%)
+  418418 secondary stacks representing 418418 secondary reads (14.3%)
+
+Stack coverage: mean=17.33; stdev=203.99; max=66737; n_reads=2514685(85.7%)
+Removing repetitive stacks: cov > 630 (mean+3*stdev)...
+  Blacklisted 5609 stacks.
+Coverage after repeat removal: mean=14.97; stdev=30.78; max=621; n_reads=2088426(71.2%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 139506 stacks into 83158; blacklisted 810 stacks.
+Coverage after assembling stacks: mean=20.65; stdev=37.69; max=712; n_reads=1699256(57.9%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 259935 out of 418418 secondary reads (62.1%), 93510 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=23.81; stdev=42.76; max=1751; n_reads=1959191(66.8%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 83158 stacks into 71668 stacks.
+Coverage after gapped assembly: mean=27.68; stdev=46.98; max=1751; n_reads=1959191(66.8%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 44802 out of 158483 secondary reads (28.3%).
+Coverage after merging gapped secondary stacks: mean=28.31; stdev=53.09; max=5892; n_reads=2003993(68.3%)
+
+Final coverage: mean=28.31; stdev=53.09; max=5892; n_reads=2003993(68.3%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 23 of 38 'RUBA4'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RUBA4.1.fq.gz -o ./stacks45.Mn8 -i 23 -m 2 --name RUBA4 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RUBA4.1.fq.gz'
+  Sample ID: 23
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...5M...6M...
+
+Loaded 6082580 reads; formed:
+  247585 stacks representing 5229226 primary reads (86.0%)
+  853354 secondary stacks representing 853354 secondary reads (14.0%)
+
+Stack coverage: mean=21.12; stdev=156.27; max=35973; n_reads=5229226(86.0%)
+Removing repetitive stacks: cov > 490 (mean+3*stdev)...
+  Blacklisted 15808 stacks.
+Coverage after repeat removal: mean=18.39; stdev=46.05; max=490; n_reads=4261517(70.1%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 231777 stacks into 131198; blacklisted 2137 stacks.
+Coverage after assembling stacks: mean=26.02; stdev=56.91; max=702; n_reads=3350334(55.1%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 567270 out of 853354 secondary reads (66.5%), 214133 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=30.42; stdev=64.57; max=1093; n_reads=3917604(64.4%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 131198 stacks into 113116 stacks.
+Coverage after gapped assembly: mean=35.39; stdev=70.34; max=1093; n_reads=3917604(64.4%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 73815 out of 286084 secondary reads (25.8%).
+Coverage after merging gapped secondary stacks: mean=36.06; stdev=71.73; max=2305; n_reads=3991419(65.6%)
+
+Final coverage: mean=36.06; stdev=71.73; max=2305; n_reads=3991419(65.6%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 24 of 38 'D2075'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/D2075.1.fq.gz -o ./stacks45.Mn8 -i 24 -m 2 --name D2075 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/D2075.1.fq.gz'
+  Sample ID: 24
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...
+
+Loaded 955263 reads; formed:
+  65960 stacks representing 786797 primary reads (82.4%)
+  168466 secondary stacks representing 168466 secondary reads (17.6%)
+
+Stack coverage: mean=11.93; stdev=77.08; max=16541; n_reads=786797(82.4%)
+Removing repetitive stacks: cov > 244 (mean+3*stdev)...
+  Blacklisted 2410 stacks.
+Coverage after repeat removal: mean=10.59; stdev=15.77; max=243; n_reads=672894(70.4%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 63550 stacks into 44926; blacklisted 247 stacks.
+Coverage after assembling stacks: mean=13.28; stdev=19.38; max=450; n_reads=592552(62.0%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 102513 out of 168466 secondary reads (60.9%), 34650 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=15.58; stdev=23.28; max=1120; n_reads=695065(72.8%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 44926 stacks into 40110 stacks.
+Coverage after gapped assembly: mean=17.46; stdev=25.51; max=1264; n_reads=695065(72.8%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 13294 out of 65953 secondary reads (20.2%).
+Coverage after merging gapped secondary stacks: mean=17.80; stdev=27.81; max=2064; n_reads=708359(74.2%)
+
+Final coverage: mean=17.80; stdev=27.81; max=2064; n_reads=708359(74.2%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 25 of 38 'D2073'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/D2073.1.fq.gz -o ./stacks45.Mn8 -i 25 -m 2 --name D2073 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/D2073.1.fq.gz'
+  Sample ID: 25
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...
+
+Loaded 336403 reads; formed:
+  40117 stacks representing 263976 primary reads (78.5%)
+  72427 secondary stacks representing 72427 secondary reads (21.5%)
+
+Stack coverage: mean=6.58; stdev=39.97; max=7015; n_reads=263976(78.5%)
+Removing repetitive stacks: cov > 127 (mean+3*stdev)...
+  Blacklisted 1187 stacks.
+Coverage after repeat removal: mean=5.87; stdev=6.33; max=125; n_reads=228623(68.0%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 38930 stacks into 29111; blacklisted 133 stacks.
+Coverage after assembling stacks: mean=7.05; stdev=7.91; max=165; n_reads=204152(60.7%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 37928 out of 72427 secondary reads (52.4%), 12777 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=8.36; stdev=10.00; max=442; n_reads=242080(72.0%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 29111 stacks into 26386 stacks.
+Coverage after gapped assembly: mean=9.23; stdev=10.96; max=442; n_reads=242080(72.0%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 5234 out of 34499 secondary reads (15.2%).
+Coverage after merging gapped secondary stacks: mean=9.43; stdev=11.66; max=483; n_reads=247314(73.5%)
+
+Final coverage: mean=9.43; stdev=11.66; max=483; n_reads=247314(73.5%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 26 of 38 'AZ12'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/AZ12.1.fq.gz -o ./stacks45.Mn8 -i 26 -m 2 --name AZ12 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/AZ12.1.fq.gz'
+  Sample ID: 26
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...5M...
+
+Loaded 5938026 reads; formed:
+  307732 stacks representing 5070822 primary reads (85.4%)
+  867204 secondary stacks representing 867204 secondary reads (14.6%)
+
+Stack coverage: mean=16.48; stdev=252.99; max=125271; n_reads=5070822(85.4%)
+Removing repetitive stacks: cov > 776 (mean+3*stdev)...
+  Blacklisted 12203 stacks.
+Coverage after repeat removal: mean=14.26; stdev=31.21; max=766; n_reads=4215010(71.0%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 295529 stacks into 160816; blacklisted 2491 stacks.
+Coverage after assembling stacks: mean=20.61; stdev=40.64; max=773; n_reads=3260179(54.9%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 571726 out of 867204 secondary reads (65.9%), 219829 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=24.22; stdev=55.39; max=11718; n_reads=3831905(64.5%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 160816 stacks into 136106 stacks.
+Coverage after gapped assembly: mean=28.71; stdev=61.65; max=11718; n_reads=3831905(64.5%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 74876 out of 295478 secondary reads (25.3%).
+Coverage after merging gapped secondary stacks: mean=29.27; stdev=62.77; max=11718; n_reads=3906781(65.8%)
+
+Final coverage: mean=29.27; stdev=62.77; max=11718; n_reads=3906781(65.8%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 27 of 38 'G41'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/G41.1.fq.gz -o ./stacks45.Mn8 -i 27 -m 2 --name G41 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/G41.1.fq.gz'
+  Sample ID: 27
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...
+
+Loaded 3980961 reads; formed:
+  131361 stacks representing 3447680 primary reads (86.6%)
+  533281 secondary stacks representing 533281 secondary reads (13.4%)
+
+Stack coverage: mean=26.25; stdev=283.91; max=90592; n_reads=3447680(86.6%)
+Removing repetitive stacks: cov > 878 (mean+3*stdev)...
+  Blacklisted 5435 stacks.
+Coverage after repeat removal: mean=23.18; stdev=48.72; max=873; n_reads=2918345(73.3%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 125926 stacks into 88005; blacklisted 550 stacks.
+Coverage after assembling stacks: mean=28.65; stdev=56.95; max=1055; n_reads=2503610(62.9%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 332487 out of 533281 secondary reads (62.3%), 117860 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=32.46; stdev=64.63; max=3180; n_reads=2836097(71.2%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 88005 stacks into 78329 stacks.
+Coverage after gapped assembly: mean=36.50; stdev=70.10; max=3180; n_reads=2836097(71.2%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 39693 out of 200794 secondary reads (19.8%).
+Coverage after merging gapped secondary stacks: mean=37.01; stdev=74.01; max=5716; n_reads=2875790(72.2%)
+
+Final coverage: mean=37.01; stdev=74.01; max=5716; n_reads=2875790(72.2%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 28 of 38 'D946'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/D946.1.fq.gz -o ./stacks45.Mn8 -i 28 -m 2 --name D946 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/D946.1.fq.gz'
+  Sample ID: 28
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...
+
+Loaded 2449063 reads; formed:
+  149119 stacks representing 2078959 primary reads (84.9%)
+  370104 secondary stacks representing 370104 secondary reads (15.1%)
+
+Stack coverage: mean=13.94; stdev=107.19; max=27440; n_reads=2078959(84.9%)
+Removing repetitive stacks: cov > 336 (mean+3*stdev)...
+  Blacklisted 3614 stacks.
+Coverage after repeat removal: mean=12.66; stdev=18.00; max=334; n_reads=1842714(75.2%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 145505 stacks into 115367; blacklisted 530 stacks.
+Coverage after assembling stacks: mean=14.26; stdev=20.48; max=562; n_reads=1636045(66.8%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 200346 out of 370104 secondary reads (54.1%), 59172 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=16.01; stdev=23.03; max=608; n_reads=1836391(75.0%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 115367 stacks into 107474 stacks.
+Coverage after gapped assembly: mean=17.19; stdev=24.85; max=654; n_reads=1836391(75.0%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 18966 out of 169758 secondary reads (11.2%).
+Coverage after merging gapped secondary stacks: mean=17.37; stdev=25.59; max=1626; n_reads=1855357(75.8%)
+
+Final coverage: mean=17.37; stdev=25.59; max=1626; n_reads=1855357(75.8%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 29 of 38 'RK2'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/RK2.1.fq.gz -o ./stacks45.Mn8 -i 29 -m 2 --name RK2 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/RK2.1.fq.gz'
+  Sample ID: 29
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...
+
+Loaded 1983001 reads; formed:
+  149521 stacks representing 1656507 primary reads (83.5%)
+  326494 secondary stacks representing 326494 secondary reads (16.5%)
+
+Stack coverage: mean=11.08; stdev=79.26; max=24576; n_reads=1656507(83.5%)
+Removing repetitive stacks: cov > 249 (mean+3*stdev)...
+  Blacklisted 4107 stacks.
+Coverage after repeat removal: mean=9.80; stdev=12.85; max=249; n_reads=1424759(71.8%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 145414 stacks into 112366; blacklisted 547 stacks.
+Coverage after assembling stacks: mean=11.16; stdev=14.98; max=388; n_reads=1246024(62.8%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 159992 out of 326494 secondary reads (49.0%), 51616 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=12.59; stdev=17.31; max=628; n_reads=1406016(70.9%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 112366 stacks into 103249 stacks.
+Coverage after gapped assembly: mean=13.71; stdev=19.01; max=628; n_reads=1406016(70.9%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 19746 out of 166502 secondary reads (11.9%).
+Coverage after merging gapped secondary stacks: mean=13.90; stdev=19.46; max=673; n_reads=1425762(71.9%)
+
+Final coverage: mean=13.90; stdev=19.46; max=673; n_reads=1425762(71.9%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 30 of 38 'AZ26'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/AZ26.1.fq.gz -o ./stacks45.Mn8 -i 30 -m 2 --name AZ26 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/AZ26.1.fq.gz'
+  Sample ID: 30
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...
+
+Loaded 2787854 reads; formed:
+  144609 stacks representing 2378915 primary reads (85.3%)
+  408939 secondary stacks representing 408939 secondary reads (14.7%)
+
+Stack coverage: mean=16.45; stdev=191.31; max=67007; n_reads=2378915(85.3%)
+Removing repetitive stacks: cov > 591 (mean+3*stdev)...
+  Blacklisted 4599 stacks.
+Coverage after repeat removal: mean=14.54; stdev=28.89; max=584; n_reads=2036418(73.0%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 140010 stacks into 86455; blacklisted 741 stacks.
+Coverage after assembling stacks: mean=19.62; stdev=36.10; max=592; n_reads=1680524(60.3%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 249467 out of 408939 secondary reads (61.0%), 88206 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=22.53; stdev=41.09; max=1904; n_reads=1929991(69.2%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 86455 stacks into 73992 stacks.
+Coverage after gapped assembly: mean=26.37; stdev=45.88; max=1904; n_reads=1929991(69.2%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 36131 out of 159472 secondary reads (22.7%).
+Coverage after merging gapped secondary stacks: mean=26.86; stdev=48.40; max=2839; n_reads=1966122(70.5%)
+
+Final coverage: mean=26.86; stdev=48.40; max=2839; n_reads=1966122(70.5%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 31 of 38 '326'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/326.1.fq.gz -o ./stacks45.Mn8 -i 31 -m 2 --name 326 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/326.1.fq.gz'
+  Sample ID: 31
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...5M...
+
+Loaded 5573389 reads; formed:
+  239474 stacks representing 4743380 primary reads (85.1%)
+  830009 secondary stacks representing 830009 secondary reads (14.9%)
+
+Stack coverage: mean=19.81; stdev=270.93; max=118577; n_reads=4743380(85.1%)
+Removing repetitive stacks: cov > 833 (mean+3*stdev)...
+  Blacklisted 9007 stacks.
+Coverage after repeat removal: mean=17.52; stdev=40.48; max=833; n_reads=4038811(72.5%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 230467 stacks into 138598; blacklisted 1535 stacks.
+Coverage after assembling stacks: mean=23.83; stdev=49.01; max=787; n_reads=3264621(58.6%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 533706 out of 830009 secondary reads (64.3%), 190969 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=27.73; stdev=55.97; max=2485; n_reads=3798327(68.2%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 138598 stacks into 119880 stacks.
+Coverage after gapped assembly: mean=32.12; stdev=61.71; max=2485; n_reads=3798327(68.2%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 72075 out of 296303 secondary reads (24.3%).
+Coverage after merging gapped secondary stacks: mean=32.73; stdev=64.15; max=3197; n_reads=3870402(69.4%)
+
+Final coverage: mean=32.73; stdev=64.15; max=3197; n_reads=3870402(69.4%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 32 of 38 '386'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/386.1.fq.gz -o ./stacks45.Mn8 -i 32 -m 2 --name 386 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/386.1.fq.gz'
+  Sample ID: 32
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...
+
+Loaded 3686519 reads; formed:
+  133626 stacks representing 3157210 primary reads (85.6%)
+  529309 secondary stacks representing 529309 secondary reads (14.4%)
+
+Stack coverage: mean=23.63; stdev=139.98; max=16683; n_reads=3157210(85.6%)
+Removing repetitive stacks: cov > 444 (mean+3*stdev)...
+  Blacklisted 8523 stacks.
+Coverage after repeat removal: mean=20.90; stdev=38.26; max=443; n_reads=2614284(70.9%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 125103 stacks into 82934; blacklisted 583 stacks.
+Coverage after assembling stacks: mean=27.75; stdev=47.66; max=631; n_reads=2280468(61.9%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 364469 out of 529309 secondary reads (68.9%), 124785 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=32.18; stdev=54.77; max=1411; n_reads=2644937(71.7%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 82934 stacks into 72403 stacks.
+Coverage after gapped assembly: mean=36.92; stdev=60.03; max=1411; n_reads=2644937(71.7%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 44639 out of 164840 secondary reads (27.1%).
+Coverage after merging gapped secondary stacks: mean=37.54; stdev=61.52; max=1508; n_reads=2689576(73.0%)
+
+Final coverage: mean=37.54; stdev=61.52; max=1508; n_reads=2689576(73.0%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 33 of 38 'G448'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/G448.1.fq.gz -o ./stacks45.Mn8 -i 33 -m 2 --name G448 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/G448.1.fq.gz'
+  Sample ID: 33
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...
+
+Loaded 4513160 reads; formed:
+  185685 stacks representing 4027152 primary reads (89.2%)
+  486008 secondary stacks representing 486008 secondary reads (10.8%)
+
+Stack coverage: mean=21.69; stdev=125.93; max=37310; n_reads=4027152(89.2%)
+Removing repetitive stacks: cov > 400 (mean+3*stdev)...
+  Blacklisted 6786 stacks.
+Coverage after repeat removal: mean=19.40; stdev=27.58; max=399; n_reads=3471500(76.9%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 178899 stacks into 138000; blacklisted 607 stacks.
+Coverage after assembling stacks: mean=22.83; stdev=32.51; max=767; n_reads=3131953(69.4%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 307608 out of 486008 secondary reads (63.3%), 91425 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=25.07; stdev=35.75; max=862; n_reads=3439561(76.2%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 138000 stacks into 125340 stacks.
+Coverage after gapped assembly: mean=27.62; stdev=38.74; max=862; n_reads=3439561(76.2%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 30845 out of 178400 secondary reads (17.3%).
+Coverage after merging gapped secondary stacks: mean=27.86; stdev=39.36; max=947; n_reads=3470406(76.9%)
+
+Final coverage: mean=27.86; stdev=39.36; max=947; n_reads=3470406(76.9%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 34 of 38 'GA237'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/GA237.1.fq.gz -o ./stacks45.Mn8 -i 34 -m 2 --name GA237 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/GA237.1.fq.gz'
+  Sample ID: 34
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...5M...6M...
+
+Loaded 6016047 reads; formed:
+  251777 stacks representing 5324697 primary reads (88.5%)
+  691350 secondary stacks representing 691350 secondary reads (11.5%)
+
+Stack coverage: mean=21.15; stdev=151.65; max=58019; n_reads=5324697(88.5%)
+Removing repetitive stacks: cov > 477 (mean+3*stdev)...
+  Blacklisted 9982 stacks.
+Coverage after repeat removal: mean=18.95; stdev=28.55; max=477; n_reads=4581579(76.2%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 241795 stacks into 171411; blacklisted 918 stacks.
+Coverage after assembling stacks: mean=23.81; stdev=34.22; max=737; n_reads=4054362(67.4%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 441410 out of 691350 secondary reads (63.8%), 133432 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=26.40; stdev=38.00; max=1595; n_reads=4495772(74.7%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 171411 stacks into 150793 stacks.
+Coverage after gapped assembly: mean=30.04; stdev=41.61; max=1595; n_reads=4495772(74.7%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 46643 out of 249940 secondary reads (18.7%).
+Coverage after merging gapped secondary stacks: mean=30.35; stdev=42.37; max=1595; n_reads=4542415(75.5%)
+
+Final coverage: mean=30.35; stdev=42.37; max=1595; n_reads=4542415(75.5%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 35 of 38 'TA144'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/TA144.1.fq.gz -o ./stacks45.Mn8 -i 35 -m 2 --name TA144 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/TA144.1.fq.gz'
+  Sample ID: 35
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...
+
+Loaded 4800202 reads; formed:
+  211380 stacks representing 4221475 primary reads (87.9%)
+  578727 secondary stacks representing 578727 secondary reads (12.1%)
+
+Stack coverage: mean=19.97; stdev=131.32; max=41684; n_reads=4221475(87.9%)
+Removing repetitive stacks: cov > 414 (mean+3*stdev)...
+  Blacklisted 7163 stacks.
+Coverage after repeat removal: mean=17.82; stdev=25.06; max=412; n_reads=3638854(75.8%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 204217 stacks into 155527; blacklisted 699 stacks.
+Coverage after assembling stacks: mean=21.08; stdev=29.88; max=746; n_reads=3259692(67.9%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 326391 out of 578727 secondary reads (56.4%), 101007 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=23.19; stdev=33.27; max=2278; n_reads=3586083(74.7%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 155527 stacks into 140476 stacks.
+Coverage after gapped assembly: mean=25.69; stdev=36.43; max=2278; n_reads=3586083(74.7%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 32623 out of 252336 secondary reads (12.9%).
+Coverage after merging gapped secondary stacks: mean=25.92; stdev=36.97; max=2521; n_reads=3618706(75.4%)
+
+Final coverage: mean=25.92; stdev=36.97; max=2521; n_reads=3618706(75.4%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 36 of 38 'TA145'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/TA145.1.fq.gz -o ./stacks45.Mn8 -i 36 -m 2 --name TA145 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/TA145.1.fq.gz'
+  Sample ID: 36
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...
+
+Loaded 4305823 reads; formed:
+  205849 stacks representing 3778255 primary reads (87.7%)
+  527568 secondary stacks representing 527568 secondary reads (12.3%)
+
+Stack coverage: mean=18.35; stdev=124.61; max=39500; n_reads=3778255(87.7%)
+Removing repetitive stacks: cov > 393 (mean+3*stdev)...
+  Blacklisted 7508 stacks.
+Coverage after repeat removal: mean=16.26; stdev=22.94; max=393; n_reads=3225824(74.9%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 198341 stacks into 147304; blacklisted 736 stacks.
+Coverage after assembling stacks: mean=19.64; stdev=27.42; max=675; n_reads=2874434(66.8%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 304469 out of 527568 secondary reads (57.7%), 92627 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=21.72; stdev=30.25; max=705; n_reads=3178903(73.8%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 147304 stacks into 132041 stacks.
+Coverage after gapped assembly: mean=24.25; stdev=33.03; max=790; n_reads=3178903(73.8%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 33404 out of 223099 secondary reads (15.0%).
+Coverage after merging gapped secondary stacks: mean=24.50; stdev=33.65; max=1364; n_reads=3212307(74.6%)
+
+Final coverage: mean=24.50; stdev=33.65; max=1364; n_reads=3212307(74.6%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 37 of 38 'Fish698'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/Fish698.1.fq.gz -o ./stacks45.Mn8 -i 37 -m 2 --name Fish698 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/Fish698.1.fq.gz'
+  Sample ID: 37
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...4M...
+
+Loaded 4311459 reads; formed:
+  189178 stacks representing 3756434 primary reads (87.1%)
+  555025 secondary stacks representing 555025 secondary reads (12.9%)
+
+Stack coverage: mean=19.86; stdev=130.10; max=49854; n_reads=3756434(87.1%)
+Removing repetitive stacks: cov > 411 (mean+3*stdev)...
+  Blacklisted 5148 stacks.
+Coverage after repeat removal: mean=18.14; stdev=26.87; max=410; n_reads=3337921(77.4%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 184030 stacks into 146596; blacklisted 657 stacks.
+Coverage after assembling stacks: mean=20.35; stdev=30.33; max=740; n_reads=2966519(68.8%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 294945 out of 555025 secondary reads (53.1%), 90945 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=22.38; stdev=33.15; max=781; n_reads=3261464(75.6%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 146596 stacks into 136074 stacks.
+Coverage after gapped assembly: mean=24.12; stdev=35.74; max=875; n_reads=3261464(75.6%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 28533 out of 260080 secondary reads (11.0%).
+Coverage after merging gapped secondary stacks: mean=24.33; stdev=36.12; max=875; n_reads=3289997(76.3%)
+
+Final coverage: mean=24.33; stdev=36.12; max=875; n_reads=3289997(76.3%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+Sample 38 of 38 'Fish684'
+----------
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/ustacks -t gzfastq -f ../../Rutilus/Fish684.1.fq.gz -o ./stacks45.Mn8 -i 38 -m 2 --name Fish684 -p 30 -M 8  --max_locus_stacks 7
+ustacks parameters selected:
+  Input file: '../../Rutilus/Fish684.1.fq.gz'
+  Sample ID: 38
+  Min depth of coverage to create a stack (m): 2
+  Repeat removal algorithm: enabled
+  Max distance allowed between stacks (M): 8
+  Max distance allowed to align secondary reads: 10
+  Max number of stacks allowed per de novo locus: 7
+  Deleveraging algorithm: disabled
+  Gapped assembly: enabled
+  Minimum alignment length: 0.8
+  Model type: SNP
+  Alpha significance level for model: 0.05
+
+Loading RAD-Tags...1M...2M...3M...
+
+Loaded 3220228 reads; formed:
+  159758 stacks representing 2794368 primary reads (86.8%)
+  425860 secondary stacks representing 425860 secondary reads (13.2%)
+
+Stack coverage: mean=17.49; stdev=118.04; max=42845; n_reads=2794368(86.8%)
+Removing repetitive stacks: cov > 372 (mean+3*stdev)...
+  Blacklisted 3952 stacks.
+Coverage after repeat removal: mean=15.93; stdev=22.92; max=372; n_reads=2482474(77.1%)
+
+Assembling stacks (max. dist. M=8)...
+  Assembled 155806 stacks into 125631; blacklisted 557 stacks.
+Coverage after assembling stacks: mean=17.64; stdev=26.24; max=690; n_reads=2203576(68.4%)
+
+Merging secondary stacks (max. dist. N=10 from consensus)...
+  Merged 226053 out of 425860 secondary reads (53.1%), 69842 merged with gapped alignments.
+Coverage after merging secondary stacks: mean=19.45; stdev=28.99; max=1043; n_reads=2429629(75.4%)
+
+Assembling stacks, allowing for gaps (min. match length 80.0%)...
+  Assembled 125631 stacks into 117350 stacks.
+Coverage after gapped assembly: mean=20.83; stdev=31.30; max=1043; n_reads=2429629(75.4%)
+
+Merging secondary stacks, allowing for gaps (min. match length 80.0%)...
+  Merged 23288 out of 199807 secondary reads (11.7%).
+Coverage after merging gapped secondary stacks: mean=21.03; stdev=32.18; max=2135; n_reads=2452917(76.2%)
+
+Final coverage: mean=21.03; stdev=32.18; max=2135; n_reads=2452917(76.2%)
+Calling consensus sequences and haplotypes for catalog assembly...
+Writing tags, SNPs, and alleles files...
+Refetching read IDs...done.
+ustacks is done.
+
+BEGIN cov_per_sample
+# Depths of Coverage for Processed Samples
+sample	depth of cov	max cov	number reads incorporated	% reads incorporated
+RUAU4	29.93	10389	3413820	68.6
+RUAU2	9.18	765	1047379	67.5
+RUOH2	14.49	523	631582	74.6
+RUOH1	15.23	1288	734915	71.3
+D2174	25.79	3835	1588859	76.2
+D2173	14.25	1849	1491236	74.1
+1197B	6.75	450	407225	67.0
+1197C	5.47	345	249437	64.7
+D283	20.31	3730	1788468	75.9
+D282	16.58	1805	932511	74.8
+RURU4	33.72	9182	4486335	67.2
+RURU3	38.65	5537	5778428	67.0
+GB15	21.76	842	3009635	75.6
+V2	19.76	1327	2735885	68.8
+AR50	35.24	2491	3339402	69.7
+AR24	22.55	2122	3151603	73.4
+RUSP1	7.15	1220	757055	66.3
+D2019	26.19	3994	1338186	76.5
+GA128	24.42	9659	2514651	68.1
+C46	15.44	1269	677057	69.8
+C47	34.65	1466	2261098	73.1
+RUBA3	28.31	5892	2003993	68.3
+RUBA4	36.06	2305	3991419	65.6
+D2075	17.80	2064	708359	74.2
+D2073	9.43	483	247314	73.5
+AZ12	29.27	11718	3906781	65.8
+G41	37.01	5716	2875790	72.2
+D946	17.37	1626	1855357	75.8
+RK2	13.90	673	1425762	71.9
+AZ26	26.86	2839	1966122	70.5
+326	32.73	3197	3870402	69.4
+386	37.54	1508	2689576	73.0
+G448	27.86	947	3470406	76.9
+GA237	30.35	1595	4542415	75.5
+TA144	25.92	2521	3618706	75.4
+TA145	24.50	1364	3212307	74.6
+Fish698	24.33	875	3289997	76.3
+Fish684	21.03	2135	2452917	76.2
+END cov_per_sample
+
+cstacks
+==========
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/cstacks -M ../info/test_popmap.tsv -p 30 -n 8 -P ./stacks45.Mn8
+
+cstacks parameters selected:
+  Loci matched based on sequence identity.
+  Number of mismatches allowed between stacks: 8
+  Gapped alignments: enabled
+Constructing catalog from 38 samples.
+
+Initializing new catalog...
+  Parsing ./stacks45.Mn8/RUAU2.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUAU2.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUAU2.alleles.tsv.gz
+  114105 loci were newly added to the catalog.
+
+Processing sample ./stacks45.Mn8/RUAU4 [2 of 38]
+  Parsing ./stacks45.Mn8/RUAU4.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUAU4.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUAU4.alleles.tsv.gz
+Searching for sequence matches...
+  114105 loci in the catalog, 12024796 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  39580 loci were matched to a catalog locus.
+  37859 loci were matched to a catalog locus using gapped alignments.
+  38014 loci were newly added to the catalog.
+  1275 loci matched more than one catalog locus, linking them.
+    2264 linked catalog loci were merged into 951 loci.
+
+Processing sample ./stacks45.Mn8/RUOH1 [3 of 38]
+  Parsing ./stacks45.Mn8/RUOH1.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUOH1.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUOH1.alleles.tsv.gz
+Searching for sequence matches...
+  150806 loci in the catalog, 16086257 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  19242 loci were matched to a catalog locus.
+  19932 loci were matched to a catalog locus using gapped alignments.
+  9709 loci were newly added to the catalog.
+  588 loci matched more than one catalog locus, linking them.
+    1105 linked catalog loci were merged into 489 loci.
+
+Processing sample ./stacks45.Mn8/RUOH2 [4 of 38]
+  Parsing ./stacks45.Mn8/RUOH2.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUOH2.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUOH2.alleles.tsv.gz
+Searching for sequence matches...
+  159899 loci in the catalog, 17182902 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  17401 loci were matched to a catalog locus.
+  16631 loci were matched to a catalog locus using gapped alignments.
+  9998 loci were newly added to the catalog.
+  406 loci matched more than one catalog locus, linking them.
+    772 linked catalog loci were merged into 334 loci.
+
+Processing sample ./stacks45.Mn8/D2173 [5 of 38]
+  Parsing ./stacks45.Mn8/D2173.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2173.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2173.alleles.tsv.gz
+Searching for sequence matches...
+  169459 loci in the catalog, 18270741 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  36683 loci were matched to a catalog locus.
+  37884 loci were matched to a catalog locus using gapped alignments.
+  31024 loci were newly added to the catalog.
+  874 loci matched more than one catalog locus, linking them.
+    1616 linked catalog loci were merged into 680 loci.
+
+Processing sample ./stacks45.Mn8/D2174 [6 of 38]
+  Parsing ./stacks45.Mn8/D2174.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2174.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2174.alleles.tsv.gz
+Searching for sequence matches...
+  199547 loci in the catalog, 21904144 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  24531 loci were matched to a catalog locus.
+  28057 loci were matched to a catalog locus using gapped alignments.
+  9562 loci were newly added to the catalog.
+  469 loci matched more than one catalog locus, linking them.
+    927 linked catalog loci were merged into 409 loci.
+
+Processing sample ./stacks45.Mn8/1197B [7 of 38]
+  Parsing ./stacks45.Mn8/1197B.tags.tsv.gz
+  Parsing ./stacks45.Mn8/1197B.snps.tsv.gz
+  Parsing ./stacks45.Mn8/1197B.alleles.tsv.gz
+Searching for sequence matches...
+  208591 loci in the catalog, 22903494 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  21605 loci were matched to a catalog locus.
+  27854 loci were matched to a catalog locus using gapped alignments.
+  11484 loci were newly added to the catalog.
+  536 loci matched more than one catalog locus, linking them.
+    1076 linked catalog loci were merged into 481 loci.
+
+Processing sample ./stacks45.Mn8/1197C [8 of 38]
+  Parsing ./stacks45.Mn8/1197C.tags.tsv.gz
+  Parsing ./stacks45.Mn8/1197C.snps.tsv.gz
+  Parsing ./stacks45.Mn8/1197C.alleles.tsv.gz
+Searching for sequence matches...
+  219480 loci in the catalog, 24210907 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  19357 loci were matched to a catalog locus.
+  21967 loci were matched to a catalog locus using gapped alignments.
+  4649 loci were newly added to the catalog.
+  336 loci matched more than one catalog locus, linking them.
+    681 linked catalog loci were merged into 310 loci.
+
+Processing sample ./stacks45.Mn8/D282 [9 of 38]
+  Parsing ./stacks45.Mn8/D282.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D282.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D282.alleles.tsv.gz
+Searching for sequence matches...
+  223758 loci in the catalog, 24695442 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  22664 loci were matched to a catalog locus.
+  26716 loci were matched to a catalog locus using gapped alignments.
+  7473 loci were newly added to the catalog.
+  551 loci matched more than one catalog locus, linking them.
+    1058 linked catalog loci were merged into 472 loci.
+
+Processing sample ./stacks45.Mn8/D283 [10 of 38]
+  Parsing ./stacks45.Mn8/D283.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D283.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D283.alleles.tsv.gz
+Searching for sequence matches...
+  230645 loci in the catalog, 25381631 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  36271 loci were matched to a catalog locus.
+  38824 loci were matched to a catalog locus using gapped alignments.
+  13883 loci were newly added to the catalog.
+  850 loci matched more than one catalog locus, linking them.
+    1609 linked catalog loci were merged into 721 loci.
+
+Processing sample ./stacks45.Mn8/RURU3 [11 of 38]
+  Parsing ./stacks45.Mn8/RURU3.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RURU3.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RURU3.alleles.tsv.gz
+Searching for sequence matches...
+  243640 loci in the catalog, 26569749 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  57916 loci were matched to a catalog locus.
+  62746 loci were matched to a catalog locus using gapped alignments.
+  30338 loci were newly added to the catalog.
+  1389 loci matched more than one catalog locus, linking them.
+    2505 linked catalog loci were merged into 1117 loci.
+
+Processing sample ./stacks45.Mn8/RURU4 [12 of 38]
+  Parsing ./stacks45.Mn8/RURU4.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RURU4.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RURU4.alleles.tsv.gz
+Searching for sequence matches...
+  272590 loci in the catalog, 29059458 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  54435 loci were matched to a catalog locus.
+  58516 loci were matched to a catalog locus using gapped alignments.
+  21477 loci were newly added to the catalog.
+  1260 loci matched more than one catalog locus, linking them.
+    2277 linked catalog loci were merged into 986 loci.
+
+Processing sample ./stacks45.Mn8/GB15 [13 of 38]
+  Parsing ./stacks45.Mn8/GB15.tags.tsv.gz
+  Parsing ./stacks45.Mn8/GB15.snps.tsv.gz
+  Parsing ./stacks45.Mn8/GB15.alleles.tsv.gz
+Searching for sequence matches...
+  292776 loci in the catalog, 30980779 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  46490 loci were matched to a catalog locus.
+  57228 loci were matched to a catalog locus using gapped alignments.
+  35747 loci were newly added to the catalog.
+  1026 loci matched more than one catalog locus, linking them.
+    1969 linked catalog loci were merged into 857 loci.
+
+Processing sample ./stacks45.Mn8/V2 [14 of 38]
+  Parsing ./stacks45.Mn8/V2.tags.tsv.gz
+  Parsing ./stacks45.Mn8/V2.snps.tsv.gz
+  Parsing ./stacks45.Mn8/V2.alleles.tsv.gz
+Searching for sequence matches...
+  327411 loci in the catalog, 34568278 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  47067 loci were matched to a catalog locus.
+  62106 loci were matched to a catalog locus using gapped alignments.
+  30531 loci were newly added to the catalog.
+  1082 loci matched more than one catalog locus, linking them.
+    2065 linked catalog loci were merged into 894 loci.
+
+Processing sample ./stacks45.Mn8/AR24 [15 of 38]
+  Parsing ./stacks45.Mn8/AR24.tags.tsv.gz
+  Parsing ./stacks45.Mn8/AR24.snps.tsv.gz
+  Parsing ./stacks45.Mn8/AR24.alleles.tsv.gz
+Searching for sequence matches...
+  356771 loci in the catalog, 37613973 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  50697 loci were matched to a catalog locus.
+  64904 loci were matched to a catalog locus using gapped alignments.
+  25261 loci were newly added to the catalog.
+  1004 loci matched more than one catalog locus, linking them.
+    1912 linked catalog loci were merged into 843 loci.
+
+Processing sample ./stacks45.Mn8/AR50 [16 of 38]
+  Parsing ./stacks45.Mn8/AR50.tags.tsv.gz
+  Parsing ./stacks45.Mn8/AR50.snps.tsv.gz
+  Parsing ./stacks45.Mn8/AR50.alleles.tsv.gz
+Searching for sequence matches...
+  380963 loci in the catalog, 40057251 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  28158 loci were matched to a catalog locus.
+  43258 loci were matched to a catalog locus using gapped alignments.
+  24150 loci were newly added to the catalog.
+  709 loci matched more than one catalog locus, linking them.
+    1322 linked catalog loci were merged into 568 loci.
+
+Processing sample ./stacks45.Mn8/D2019 [17 of 38]
+  Parsing ./stacks45.Mn8/D2019.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2019.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2019.alleles.tsv.gz
+Searching for sequence matches...
+  404359 loci in the catalog, 41587779 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  15592 loci were matched to a catalog locus.
+  31303 loci were matched to a catalog locus using gapped alignments.
+  4723 loci were newly added to the catalog.
+  476 loci matched more than one catalog locus, linking them.
+    949 linked catalog loci were merged into 426 loci.
+
+Processing sample ./stacks45.Mn8/RUSP1 [18 of 38]
+  Parsing ./stacks45.Mn8/RUSP1.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUSP1.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUSP1.alleles.tsv.gz
+Searching for sequence matches...
+  408559 loci in the catalog, 42017738 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  28468 loci were matched to a catalog locus.
+  44730 loci were matched to a catalog locus using gapped alignments.
+  33566 loci were newly added to the catalog.
+  749 loci matched more than one catalog locus, linking them.
+    1458 linked catalog loci were merged into 649 loci.
+
+Processing sample ./stacks45.Mn8/GA128 [19 of 38]
+  Parsing ./stacks45.Mn8/GA128.tags.tsv.gz
+  Parsing ./stacks45.Mn8/GA128.snps.tsv.gz
+  Parsing ./stacks45.Mn8/GA128.alleles.tsv.gz
+Searching for sequence matches...
+  441316 loci in the catalog, 45502432 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  34816 loci were matched to a catalog locus.
+  56903 loci were matched to a catalog locus using gapped alignments.
+  12814 loci were newly added to the catalog.
+  1419 loci matched more than one catalog locus, linking them.
+    2698 linked catalog loci were merged into 1211 loci.
+
+Processing sample ./stacks45.Mn8/C46 [20 of 38]
+  Parsing ./stacks45.Mn8/C46.tags.tsv.gz
+  Parsing ./stacks45.Mn8/C46.snps.tsv.gz
+  Parsing ./stacks45.Mn8/C46.alleles.tsv.gz
+Searching for sequence matches...
+  452643 loci in the catalog, 46512128 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  12957 loci were matched to a catalog locus.
+  28012 loci were matched to a catalog locus using gapped alignments.
+  3552 loci were newly added to the catalog.
+  612 loci matched more than one catalog locus, linking them.
+    1198 linked catalog loci were merged into 548 loci.
+
+Processing sample ./stacks45.Mn8/C47 [21 of 38]
+  Parsing ./stacks45.Mn8/C47.tags.tsv.gz
+  Parsing ./stacks45.Mn8/C47.snps.tsv.gz
+  Parsing ./stacks45.Mn8/C47.alleles.tsv.gz
+Searching for sequence matches...
+  455545 loci in the catalog, 46890431 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  20315 loci were matched to a catalog locus.
+  36901 loci were matched to a catalog locus using gapped alignments.
+  8715 loci were newly added to the catalog.
+  617 loci matched more than one catalog locus, linking them.
+    1172 linked catalog loci were merged into 511 loci.
+
+Processing sample ./stacks45.Mn8/RUBA3 [22 of 38]
+  Parsing ./stacks45.Mn8/RUBA3.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUBA3.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUBA3.alleles.tsv.gz
+Searching for sequence matches...
+  463599 loci in the catalog, 47587436 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  22986 loci were matched to a catalog locus.
+  41378 loci were matched to a catalog locus using gapped alignments.
+  7338 loci were newly added to the catalog.
+  825 loci matched more than one catalog locus, linking them.
+    1601 linked catalog loci were merged into 706 loci.
+
+Processing sample ./stacks45.Mn8/RUBA4 [23 of 38]
+  Parsing ./stacks45.Mn8/RUBA4.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUBA4.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUBA4.alleles.tsv.gz
+Searching for sequence matches...
+  470042 loci in the catalog, 48302387 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  35448 loci were matched to a catalog locus.
+  56122 loci were matched to a catalog locus using gapped alignments.
+  20359 loci were newly added to the catalog.
+  1135 loci matched more than one catalog locus, linking them.
+    2125 linked catalog loci were merged into 929 loci.
+
+Processing sample ./stacks45.Mn8/D2073 [24 of 38]
+  Parsing ./stacks45.Mn8/D2073.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2073.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2073.alleles.tsv.gz
+Searching for sequence matches...
+  489205 loci in the catalog, 49916401 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  6412 loci were matched to a catalog locus.
+  18844 loci were matched to a catalog locus using gapped alignments.
+  1354 loci were newly added to the catalog.
+  343 loci matched more than one catalog locus, linking them.
+    665 linked catalog loci were merged into 292 loci.
+
+Processing sample ./stacks45.Mn8/D2075 [25 of 38]
+  Parsing ./stacks45.Mn8/D2075.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2075.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2075.alleles.tsv.gz
+Searching for sequence matches...
+  490186 loci in the catalog, 50059443 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  11280 loci were matched to a catalog locus.
+  26484 loci were matched to a catalog locus using gapped alignments.
+  2508 loci were newly added to the catalog.
+  406 loci matched more than one catalog locus, linking them.
+    815 linked catalog loci were merged into 355 loci.
+
+Processing sample ./stacks45.Mn8/AZ12 [26 of 38]
+  Parsing ./stacks45.Mn8/AZ12.tags.tsv.gz
+  Parsing ./stacks45.Mn8/AZ12.snps.tsv.gz
+  Parsing ./stacks45.Mn8/AZ12.alleles.tsv.gz
+Searching for sequence matches...
+  492234 loci in the catalog, 50275587 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  46401 loci were matched to a catalog locus.
+  74261 loci were matched to a catalog locus using gapped alignments.
+  14803 loci were newly added to the catalog.
+  1804 loci matched more than one catalog locus, linking them.
+    3387 linked catalog loci were merged into 1486 loci.
+
+Processing sample ./stacks45.Mn8/G41 [27 of 38]
+  Parsing ./stacks45.Mn8/G41.tags.tsv.gz
+  Parsing ./stacks45.Mn8/G41.snps.tsv.gz
+  Parsing ./stacks45.Mn8/G41.alleles.tsv.gz
+Searching for sequence matches...
+  505136 loci in the catalog, 51476607 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  22092 loci were matched to a catalog locus.
+  43123 loci were matched to a catalog locus using gapped alignments.
+  13310 loci were newly added to the catalog.
+  727 loci matched more than one catalog locus, linking them.
+    1428 linked catalog loci were merged into 639 loci.
+
+Processing sample ./stacks45.Mn8/D946 [28 of 38]
+  Parsing ./stacks45.Mn8/D946.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D946.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D946.alleles.tsv.gz
+Searching for sequence matches...
+  517657 loci in the catalog, 52244677 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  33618 loci were matched to a catalog locus.
+  59956 loci were matched to a catalog locus using gapped alignments.
+  14188 loci were newly added to the catalog.
+  822 loci matched more than one catalog locus, linking them.
+    1646 linked catalog loci were merged into 735 loci.
+
+Processing sample ./stacks45.Mn8/AZ26 [29 of 38]
+  Parsing ./stacks45.Mn8/AZ26.tags.tsv.gz
+  Parsing ./stacks45.Mn8/AZ26.snps.tsv.gz
+  Parsing ./stacks45.Mn8/AZ26.alleles.tsv.gz
+Searching for sequence matches...
+  530934 loci in the catalog, 53616608 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  22144 loci were matched to a catalog locus.
+  44898 loci were matched to a catalog locus using gapped alignments.
+  7236 loci were newly added to the catalog.
+  1009 loci matched more than one catalog locus, linking them.
+    1948 linked catalog loci were merged into 895 loci.
+
+Processing sample ./stacks45.Mn8/RK2 [30 of 38]
+  Parsing ./stacks45.Mn8/RK2.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RK2.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RK2.alleles.tsv.gz
+Searching for sequence matches...
+  537117 loci in the catalog, 54110555 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  35055 loci were matched to a catalog locus.
+  59410 loci were matched to a catalog locus using gapped alignments.
+  9000 loci were newly added to the catalog.
+  814 loci matched more than one catalog locus, linking them.
+    1619 linked catalog loci were merged into 724 loci.
+
+Processing sample ./stacks45.Mn8/326 [31 of 38]
+  Parsing ./stacks45.Mn8/326.tags.tsv.gz
+  Parsing ./stacks45.Mn8/326.snps.tsv.gz
+  Parsing ./stacks45.Mn8/326.alleles.tsv.gz
+Searching for sequence matches...
+  545222 loci in the catalog, 54915044 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  34887 loci were matched to a catalog locus.
+  64594 loci were matched to a catalog locus using gapped alignments.
+  20158 loci were newly added to the catalog.
+  1252 loci matched more than one catalog locus, linking them.
+    2363 linked catalog loci were merged into 1046 loci.
+
+Processing sample ./stacks45.Mn8/386 [32 of 38]
+  Parsing ./stacks45.Mn8/386.tags.tsv.gz
+  Parsing ./stacks45.Mn8/386.snps.tsv.gz
+  Parsing ./stacks45.Mn8/386.alleles.tsv.gz
+Searching for sequence matches...
+  564063 loci in the catalog, 55976639 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  21061 loci were matched to a catalog locus.
+  42152 loci were matched to a catalog locus using gapped alignments.
+  9304 loci were newly added to the catalog.
+  793 loci matched more than one catalog locus, linking them.
+    1525 linked catalog loci were merged into 683 loci.
+
+Processing sample ./stacks45.Mn8/G448 [33 of 38]
+  Parsing ./stacks45.Mn8/G448.tags.tsv.gz
+  Parsing ./stacks45.Mn8/G448.snps.tsv.gz
+  Parsing ./stacks45.Mn8/G448.alleles.tsv.gz
+Searching for sequence matches...
+  572525 loci in the catalog, 56499642 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  43133 loci were matched to a catalog locus.
+  70393 loci were matched to a catalog locus using gapped alignments.
+  12215 loci were newly added to the catalog.
+  1071 loci matched more than one catalog locus, linking them.
+    2122 linked catalog loci were merged into 949 loci.
+
+Processing sample ./stacks45.Mn8/GA237 [34 of 38]
+  Parsing ./stacks45.Mn8/GA237.tags.tsv.gz
+  Parsing ./stacks45.Mn8/GA237.snps.tsv.gz
+  Parsing ./stacks45.Mn8/GA237.alleles.tsv.gz
+Searching for sequence matches...
+  583567 loci in the catalog, 57586710 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  56104 loci were matched to a catalog locus.
+  81982 loci were matched to a catalog locus using gapped alignments.
+  12998 loci were newly added to the catalog.
+  1264 loci matched more than one catalog locus, linking them.
+    2473 linked catalog loci were merged into 1104 loci.
+
+Processing sample ./stacks45.Mn8/TA144 [35 of 38]
+  Parsing ./stacks45.Mn8/TA144.tags.tsv.gz
+  Parsing ./stacks45.Mn8/TA144.snps.tsv.gz
+  Parsing ./stacks45.Mn8/TA144.alleles.tsv.gz
+Searching for sequence matches...
+  595196 loci in the catalog, 58680569 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  48396 loci were matched to a catalog locus.
+  77936 loci were matched to a catalog locus using gapped alignments.
+  14579 loci were newly added to the catalog.
+  1200 loci matched more than one catalog locus, linking them.
+    2342 linked catalog loci were merged into 1049 loci.
+
+Processing sample ./stacks45.Mn8/TA145 [36 of 38]
+  Parsing ./stacks45.Mn8/TA145.tags.tsv.gz
+  Parsing ./stacks45.Mn8/TA145.snps.tsv.gz
+  Parsing ./stacks45.Mn8/TA145.alleles.tsv.gz
+Searching for sequence matches...
+  608482 loci in the catalog, 59905601 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  47670 loci were matched to a catalog locus.
+  75771 loci were matched to a catalog locus using gapped alignments.
+  8828 loci were newly added to the catalog.
+  1045 loci matched more than one catalog locus, linking them.
+    2053 linked catalog loci were merged into 924 loci.
+
+Processing sample ./stacks45.Mn8/Fish684 [37 of 38]
+  Parsing ./stacks45.Mn8/Fish684.tags.tsv.gz
+  Parsing ./stacks45.Mn8/Fish684.snps.tsv.gz
+  Parsing ./stacks45.Mn8/Fish684.alleles.tsv.gz
+Searching for sequence matches...
+  616181 loci in the catalog, 60610100 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  39129 loci were matched to a catalog locus.
+  68464 loci were matched to a catalog locus using gapped alignments.
+  10038 loci were newly added to the catalog.
+  872 loci matched more than one catalog locus, linking them.
+    1740 linked catalog loci were merged into 778 loci.
+
+Processing sample ./stacks45.Mn8/Fish698 [38 of 38]
+  Parsing ./stacks45.Mn8/Fish698.tags.tsv.gz
+  Parsing ./stacks45.Mn8/Fish698.snps.tsv.gz
+  Parsing ./stacks45.Mn8/Fish698.alleles.tsv.gz
+Searching for sequence matches...
+  625257 loci in the catalog, 61384536 kmers in the catalog hash.
+Searching for gapped alignments...
+Merging matches into catalog...
+  49502 loci were matched to a catalog locus.
+  75809 loci were matched to a catalog locus using gapped alignments.
+  10730 loci were newly added to the catalog.
+  723 loci matched more than one catalog locus, linking them.
+    1423 linked catalog loci were merged into 637 loci.
+
+Writing catalog in directory './stacks45.Mn8/'.
+Final catalog contains 635201 loci.
+cstacks is done.
+
+sstacks
+==========
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/sstacks -P ./stacks45.Mn8 -M ../info/test_popmap.tsv -p 30
+
+Searching for matches by sequence identity...
+  Parsing ./stacks45.Mn8/catalog.tags.tsv.gz
+  Parsing ./stacks45.Mn8/catalog.snps.tsv.gz
+  Parsing ./stacks45.Mn8/catalog.alleles.tsv.gz
+Populating kmer dictionary for exact matches...done.
+Populating kmer dictionary for gapped alignments...done.
+
+Processing sample './stacks45.Mn8/RUAU2' [1 of 38]
+  Parsing ./stacks45.Mn8/RUAU2.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUAU2.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUAU2.alleles.tsv.gz
+Searching for sequence matches...
+114105 sample loci compared against the catalog containing 635201 loci.
+  48425 matching loci, 520 contained no verified haplotypes.
+  3 loci matched more than one catalog locus and were excluded.
+  518 loci contained SNPs unaccounted for in the catalog and were excluded.
+  59487 total haplotypes examined from matching loci, 58857 verified.
+Searching for gapped alignments...
+Out of 114105 query loci, 66202 gapped alignments attempted.
+  55899 loci matched one catalog locus; 107903 total haplotypes examined, 85927 verified.
+  10303 loci matched no catalog locus;
+    597 loci matched more than one catalog locus and were excluded.
+    1574 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RUAU2.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/RUAU4' [2 of 38]
+  Parsing ./stacks45.Mn8/RUAU4.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUAU4.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUAU4.alleles.tsv.gz
+Searching for sequence matches...
+114045 sample loci compared against the catalog containing 635201 loci.
+  41718 matching loci, 544 contained no verified haplotypes.
+  5 loci matched more than one catalog locus and were excluded.
+  540 loci contained SNPs unaccounted for in the catalog and were excluded.
+  49801 total haplotypes examined from matching loci, 49180 verified.
+Searching for gapped alignments...
+Out of 114045 query loci, 72872 gapped alignments attempted.
+  58949 loci matched one catalog locus; 113283 total haplotypes examined, 86400 verified.
+  13923 loci matched no catalog locus;
+    794 loci matched more than one catalog locus and were excluded.
+    1927 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RUAU4.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/RUOH1' [3 of 38]
+  Parsing ./stacks45.Mn8/RUOH1.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUOH1.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUOH1.alleles.tsv.gz
+Searching for sequence matches...
+48245 sample loci compared against the catalog containing 635201 loci.
+  14963 matching loci, 221 contained no verified haplotypes.
+  3 loci matched more than one catalog locus and were excluded.
+  218 loci contained SNPs unaccounted for in the catalog and were excluded.
+  16808 total haplotypes examined from matching loci, 16536 verified.
+Searching for gapped alignments...
+Out of 48245 query loci, 33503 gapped alignments attempted.
+  27917 loci matched one catalog locus; 48745 total haplotypes examined, 37963 verified.
+  5586 loci matched no catalog locus;
+    347 loci matched more than one catalog locus and were excluded.
+    813 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RUOH1.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/RUOH2' [4 of 38]
+  Parsing ./stacks45.Mn8/RUOH2.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUOH2.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUOH2.alleles.tsv.gz
+Searching for sequence matches...
+43576 sample loci compared against the catalog containing 635201 loci.
+  14094 matching loci, 197 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  196 loci contained SNPs unaccounted for in the catalog and were excluded.
+  15738 total haplotypes examined from matching loci, 15502 verified.
+Searching for gapped alignments...
+Out of 43576 query loci, 29680 gapped alignments attempted.
+  24564 loci matched one catalog locus; 40807 total haplotypes examined, 31528 verified.
+  5116 loci matched no catalog locus;
+    236 loci matched more than one catalog locus and were excluded.
+    694 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RUOH2.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/D2173' [5 of 38]
+  Parsing ./stacks45.Mn8/D2173.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2173.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2173.alleles.tsv.gz
+Searching for sequence matches...
+104613 sample loci compared against the catalog containing 635201 loci.
+  40175 matching loci, 302 contained no verified haplotypes.
+  3 loci matched more than one catalog locus and were excluded.
+  299 loci contained SNPs unaccounted for in the catalog and were excluded.
+  45212 total haplotypes examined from matching loci, 44849 verified.
+Searching for gapped alignments...
+Out of 104613 query loci, 64740 gapped alignments attempted.
+  54694 loci matched one catalog locus; 87630 total haplotypes examined, 68939 verified.
+  10046 loci matched no catalog locus;
+    366 loci matched more than one catalog locus and were excluded.
+    1124 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/D2173.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/D2174' [6 of 38]
+  Parsing ./stacks45.Mn8/D2174.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2174.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2174.alleles.tsv.gz
+Searching for sequence matches...
+61618 sample loci compared against the catalog containing 635201 loci.
+  20029 matching loci, 215 contained no verified haplotypes.
+  3 loci matched more than one catalog locus and were excluded.
+  212 loci contained SNPs unaccounted for in the catalog and were excluded.
+  22258 total haplotypes examined from matching loci, 22017 verified.
+Searching for gapped alignments...
+Out of 61618 query loci, 41804 gapped alignments attempted.
+  34027 loci matched one catalog locus; 56143 total haplotypes examined, 42557 verified.
+  7777 loci matched no catalog locus;
+    310 loci matched more than one catalog locus and were excluded.
+    825 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/D2174.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/1197B' [7 of 38]
+  Parsing ./stacks45.Mn8/1197B.tags.tsv.gz
+  Parsing ./stacks45.Mn8/1197B.snps.tsv.gz
+  Parsing ./stacks45.Mn8/1197B.alleles.tsv.gz
+Searching for sequence matches...
+60339 sample loci compared against the catalog containing 635201 loci.
+  18911 matching loci, 140 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  139 loci contained SNPs unaccounted for in the catalog and were excluded.
+  19808 total haplotypes examined from matching loci, 19635 verified.
+Searching for gapped alignments...
+Out of 60339 query loci, 41568 gapped alignments attempted.
+  35541 loci matched one catalog locus; 49929 total haplotypes examined, 39734 verified.
+  6027 loci matched no catalog locus;
+    210 loci matched more than one catalog locus and were excluded.
+    565 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/1197B.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/1197C' [8 of 38]
+  Parsing ./stacks45.Mn8/1197C.tags.tsv.gz
+  Parsing ./stacks45.Mn8/1197C.snps.tsv.gz
+  Parsing ./stacks45.Mn8/1197C.alleles.tsv.gz
+Searching for sequence matches...
+45597 sample loci compared against the catalog containing 635201 loci.
+  13409 matching loci, 74 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  73 loci contained SNPs unaccounted for in the catalog and were excluded.
+  13827 total haplotypes examined from matching loci, 13737 verified.
+Searching for gapped alignments...
+Out of 45597 query loci, 32262 gapped alignments attempted.
+  27307 loci matched one catalog locus; 37093 total haplotypes examined, 29278 verified.
+  4955 loci matched no catalog locus;
+    138 loci matched more than one catalog locus and were excluded.
+    415 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/1197C.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/D282' [9 of 38]
+  Parsing ./stacks45.Mn8/D282.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D282.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D282.alleles.tsv.gz
+Searching for sequence matches...
+56251 sample loci compared against the catalog containing 635201 loci.
+  18035 matching loci, 230 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  229 loci contained SNPs unaccounted for in the catalog and were excluded.
+  19998 total haplotypes examined from matching loci, 19747 verified.
+Searching for gapped alignments...
+Out of 56251 query loci, 38447 gapped alignments attempted.
+  31456 loci matched one catalog locus; 53458 total haplotypes examined, 40824 verified.
+  6991 loci matched no catalog locus;
+    327 loci matched more than one catalog locus and were excluded.
+    878 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/D282.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/D283' [10 of 38]
+  Parsing ./stacks45.Mn8/D283.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D283.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D283.alleles.tsv.gz
+Searching for sequence matches...
+88056 sample loci compared against the catalog containing 635201 loci.
+  32832 matching loci, 377 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  376 loci contained SNPs unaccounted for in the catalog and were excluded.
+  37801 total haplotypes examined from matching loci, 37364 verified.
+Searching for gapped alignments...
+Out of 88056 query loci, 55601 gapped alignments attempted.
+  45261 loci matched one catalog locus; 84378 total haplotypes examined, 64628 verified.
+  10340 loci matched no catalog locus;
+    510 loci matched more than one catalog locus and were excluded.
+    1424 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/D283.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/RURU3' [11 of 38]
+  Parsing ./stacks45.Mn8/RURU3.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RURU3.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RURU3.alleles.tsv.gz
+Searching for sequence matches...
+149517 sample loci compared against the catalog containing 635201 loci.
+  64950 matching loci, 492 contained no verified haplotypes.
+  2 loci matched more than one catalog locus and were excluded.
+  490 loci contained SNPs unaccounted for in the catalog and were excluded.
+  76281 total haplotypes examined from matching loci, 75714 verified.
+Searching for gapped alignments...
+Out of 149517 query loci, 85059 gapped alignments attempted.
+  68112 loci matched one catalog locus; 129570 total haplotypes examined, 97743 verified.
+  16947 loci matched no catalog locus;
+    687 loci matched more than one catalog locus and were excluded.
+    1905 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RURU3.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/RURU4' [12 of 38]
+  Parsing ./stacks45.Mn8/RURU4.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RURU4.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RURU4.alleles.tsv.gz
+Searching for sequence matches...
+133062 sample loci compared against the catalog containing 635201 loci.
+  55185 matching loci, 500 contained no verified haplotypes.
+  6 loci matched more than one catalog locus and were excluded.
+  494 loci contained SNPs unaccounted for in the catalog and were excluded.
+  65564 total haplotypes examined from matching loci, 64987 verified.
+Searching for gapped alignments...
+Out of 133062 query loci, 78378 gapped alignments attempted.
+  63814 loci matched one catalog locus; 121302 total haplotypes examined, 93449 verified.
+  14564 loci matched no catalog locus;
+    673 loci matched more than one catalog locus and were excluded.
+    1804 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RURU4.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/GB15' [13 of 38]
+  Parsing ./stacks45.Mn8/GB15.tags.tsv.gz
+  Parsing ./stacks45.Mn8/GB15.snps.tsv.gz
+  Parsing ./stacks45.Mn8/GB15.alleles.tsv.gz
+Searching for sequence matches...
+138306 sample loci compared against the catalog containing 635201 loci.
+  58782 matching loci, 384 contained no verified haplotypes.
+  7 loci matched more than one catalog locus and were excluded.
+  377 loci contained SNPs unaccounted for in the catalog and were excluded.
+  65355 total haplotypes examined from matching loci, 64869 verified.
+Searching for gapped alignments...
+Out of 138306 query loci, 79908 gapped alignments attempted.
+  70549 loci matched one catalog locus; 106119 total haplotypes examined, 88313 verified.
+  9359 loci matched no catalog locus;
+    503 loci matched more than one catalog locus and were excluded.
+    1212 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/GB15.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/V2' [14 of 38]
+  Parsing ./stacks45.Mn8/V2.tags.tsv.gz
+  Parsing ./stacks45.Mn8/V2.snps.tsv.gz
+  Parsing ./stacks45.Mn8/V2.alleles.tsv.gz
+Searching for sequence matches...
+138490 sample loci compared against the catalog containing 635201 loci.
+  60882 matching loci, 404 contained no verified haplotypes.
+  7 loci matched more than one catalog locus and were excluded.
+  397 loci contained SNPs unaccounted for in the catalog and were excluded.
+  70482 total haplotypes examined from matching loci, 70007 verified.
+Searching for gapped alignments...
+Out of 138490 query loci, 78014 gapped alignments attempted.
+  67606 loci matched one catalog locus; 110490 total haplotypes examined, 90527 verified.
+  10408 loci matched no catalog locus;
+    468 loci matched more than one catalog locus and were excluded.
+    1232 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/V2.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/AR24' [15 of 38]
+  Parsing ./stacks45.Mn8/AR24.tags.tsv.gz
+  Parsing ./stacks45.Mn8/AR24.snps.tsv.gz
+  Parsing ./stacks45.Mn8/AR24.alleles.tsv.gz
+Searching for sequence matches...
+139743 sample loci compared against the catalog containing 635201 loci.
+  60946 matching loci, 293 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  293 loci contained SNPs unaccounted for in the catalog and were excluded.
+  67023 total haplotypes examined from matching loci, 66663 verified.
+Searching for gapped alignments...
+Out of 139743 query loci, 79091 gapped alignments attempted.
+  70021 loci matched one catalog locus; 101858 total haplotypes examined, 85115 verified.
+  9070 loci matched no catalog locus;
+    363 loci matched more than one catalog locus and were excluded.
+    950 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/AR24.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/AR50' [16 of 38]
+  Parsing ./stacks45.Mn8/AR50.tags.tsv.gz
+  Parsing ./stacks45.Mn8/AR50.snps.tsv.gz
+  Parsing ./stacks45.Mn8/AR50.alleles.tsv.gz
+Searching for sequence matches...
+94775 sample loci compared against the catalog containing 635201 loci.
+  43447 matching loci, 223 contained no verified haplotypes.
+  2 loci matched more than one catalog locus and were excluded.
+  221 loci contained SNPs unaccounted for in the catalog and were excluded.
+  47134 total haplotypes examined from matching loci, 46861 verified.
+Searching for gapped alignments...
+Out of 94775 query loci, 51551 gapped alignments attempted.
+  43731 loci matched one catalog locus; 67717 total haplotypes examined, 53870 verified.
+  7820 loci matched no catalog locus;
+    294 loci matched more than one catalog locus and were excluded.
+    724 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/AR50.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/D2019' [17 of 38]
+  Parsing ./stacks45.Mn8/D2019.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2019.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2019.alleles.tsv.gz
+Searching for sequence matches...
+51088 sample loci compared against the catalog containing 635201 loci.
+  15043 matching loci, 119 contained no verified haplotypes.
+  4 loci matched more than one catalog locus and were excluded.
+  115 loci contained SNPs unaccounted for in the catalog and were excluded.
+  16033 total haplotypes examined from matching loci, 15890 verified.
+Searching for gapped alignments...
+Out of 51088 query loci, 36164 gapped alignments attempted.
+  30510 loci matched one catalog locus; 44422 total haplotypes examined, 34986 verified.
+  5654 loci matched no catalog locus;
+    192 loci matched more than one catalog locus and were excluded.
+    477 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/D2019.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/RUSP1' [18 of 38]
+  Parsing ./stacks45.Mn8/RUSP1.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUSP1.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUSP1.alleles.tsv.gz
+Searching for sequence matches...
+105939 sample loci compared against the catalog containing 635201 loci.
+  55112 matching loci, 221 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  220 loci contained SNPs unaccounted for in the catalog and were excluded.
+  63102 total haplotypes examined from matching loci, 62838 verified.
+Searching for gapped alignments...
+Out of 105939 query loci, 51048 gapped alignments attempted.
+  44219 loci matched one catalog locus; 67156 total haplotypes examined, 54506 verified.
+  6829 loci matched no catalog locus;
+    274 loci matched more than one catalog locus and were excluded.
+    698 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RUSP1.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/GA128' [19 of 38]
+  Parsing ./stacks45.Mn8/GA128.tags.tsv.gz
+  Parsing ./stacks45.Mn8/GA128.snps.tsv.gz
+  Parsing ./stacks45.Mn8/GA128.alleles.tsv.gz
+Searching for sequence matches...
+102989 sample loci compared against the catalog containing 635201 loci.
+  38662 matching loci, 467 contained no verified haplotypes.
+  6 loci matched more than one catalog locus and were excluded.
+  461 loci contained SNPs unaccounted for in the catalog and were excluded.
+  45407 total haplotypes examined from matching loci, 44841 verified.
+Searching for gapped alignments...
+Out of 102989 query loci, 64794 gapped alignments attempted.
+  54931 loci matched one catalog locus; 101463 total haplotypes examined, 81465 verified.
+  9863 loci matched no catalog locus;
+    632 loci matched more than one catalog locus and were excluded.
+    1434 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/GA128.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/C46' [20 of 38]
+  Parsing ./stacks45.Mn8/C46.tags.tsv.gz
+  Parsing ./stacks45.Mn8/C46.snps.tsv.gz
+  Parsing ./stacks45.Mn8/C46.alleles.tsv.gz
+Searching for sequence matches...
+43858 sample loci compared against the catalog containing 635201 loci.
+  12148 matching loci, 151 contained no verified haplotypes.
+  0 loci matched more than one catalog locus and were excluded.
+  151 loci contained SNPs unaccounted for in the catalog and were excluded.
+  13566 total haplotypes examined from matching loci, 13392 verified.
+Searching for gapped alignments...
+Out of 43858 query loci, 31861 gapped alignments attempted.
+  27393 loci matched one catalog locus; 43877 total haplotypes examined, 35416 verified.
+  4468 loci matched no catalog locus;
+    254 loci matched more than one catalog locus and were excluded.
+    603 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/C46.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/C47' [21 of 38]
+  Parsing ./stacks45.Mn8/C47.tags.tsv.gz
+  Parsing ./stacks45.Mn8/C47.snps.tsv.gz
+  Parsing ./stacks45.Mn8/C47.alleles.tsv.gz
+Searching for sequence matches...
+65250 sample loci compared against the catalog containing 635201 loci.
+  23432 matching loci, 179 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  178 loci contained SNPs unaccounted for in the catalog and were excluded.
+  25454 total haplotypes examined from matching loci, 25242 verified.
+Searching for gapped alignments...
+Out of 65250 query loci, 41997 gapped alignments attempted.
+  36005 loci matched one catalog locus; 53435 total haplotypes examined, 42917 verified.
+  5992 loci matched no catalog locus;
+    235 loci matched more than one catalog locus and were excluded.
+    584 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/C47.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/RUBA3' [22 of 38]
+  Parsing ./stacks45.Mn8/RUBA3.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUBA3.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUBA3.alleles.tsv.gz
+Searching for sequence matches...
+70782 sample loci compared against the catalog containing 635201 loci.
+  24829 matching loci, 209 contained no verified haplotypes.
+  6 loci matched more than one catalog locus and were excluded.
+  203 loci contained SNPs unaccounted for in the catalog and were excluded.
+  28170 total haplotypes examined from matching loci, 27925 verified.
+Searching for gapped alignments...
+Out of 70782 query loci, 46162 gapped alignments attempted.
+  39130 loci matched one catalog locus; 64168 total haplotypes examined, 51013 verified.
+  7032 loci matched no catalog locus;
+    332 loci matched more than one catalog locus and were excluded.
+    760 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RUBA3.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/RUBA4' [23 of 38]
+  Parsing ./stacks45.Mn8/RUBA4.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RUBA4.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RUBA4.alleles.tsv.gz
+Searching for sequence matches...
+110695 sample loci compared against the catalog containing 635201 loci.
+  50004 matching loci, 242 contained no verified haplotypes.
+  0 loci matched more than one catalog locus and were excluded.
+  242 loci contained SNPs unaccounted for in the catalog and were excluded.
+  56286 total haplotypes examined from matching loci, 55995 verified.
+Searching for gapped alignments...
+Out of 110695 query loci, 60933 gapped alignments attempted.
+  51485 loci matched one catalog locus; 84171 total haplotypes examined, 66878 verified.
+  9448 loci matched no catalog locus;
+    376 loci matched more than one catalog locus and were excluded.
+    878 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RUBA4.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/D2073' [24 of 38]
+  Parsing ./stacks45.Mn8/D2073.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2073.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2073.alleles.tsv.gz
+Searching for sequence matches...
+26221 sample loci compared against the catalog containing 635201 loci.
+  5680 matching loci, 84 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  83 loci contained SNPs unaccounted for in the catalog and were excluded.
+  6153 total haplotypes examined from matching loci, 6058 verified.
+Searching for gapped alignments...
+Out of 26221 query loci, 20625 gapped alignments attempted.
+  17944 loci matched one catalog locus; 26306 total haplotypes examined, 21582 verified.
+  2681 loci matched no catalog locus;
+    144 loci matched more than one catalog locus and were excluded.
+    323 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/D2073.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/D2075' [25 of 38]
+  Parsing ./stacks45.Mn8/D2075.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D2075.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D2075.alleles.tsv.gz
+Searching for sequence matches...
+39804 sample loci compared against the catalog containing 635201 loci.
+  10919 matching loci, 94 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  93 loci contained SNPs unaccounted for in the catalog and were excluded.
+  11780 total haplotypes examined from matching loci, 11668 verified.
+Searching for gapped alignments...
+Out of 39804 query loci, 28979 gapped alignments attempted.
+  25261 loci matched one catalog locus; 36889 total haplotypes examined, 30288 verified.
+  3718 loci matched no catalog locus;
+    179 loci matched more than one catalog locus and were excluded.
+    411 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/D2075.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/AZ12' [26 of 38]
+  Parsing ./stacks45.Mn8/AZ12.tags.tsv.gz
+  Parsing ./stacks45.Mn8/AZ12.snps.tsv.gz
+  Parsing ./stacks45.Mn8/AZ12.alleles.tsv.gz
+Searching for sequence matches...
+133492 sample loci compared against the catalog containing 635201 loci.
+  53991 matching loci, 431 contained no verified haplotypes.
+  3 loci matched more than one catalog locus and were excluded.
+  428 loci contained SNPs unaccounted for in the catalog and were excluded.
+  63830 total haplotypes examined from matching loci, 63315 verified.
+Searching for gapped alignments...
+Out of 133492 query loci, 79932 gapped alignments attempted.
+  68791 loci matched one catalog locus; 122915 total haplotypes examined, 100570 verified.
+  11141 loci matched no catalog locus;
+    595 loci matched more than one catalog locus and were excluded.
+    1390 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/AZ12.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/G41' [27 of 38]
+  Parsing ./stacks45.Mn8/G41.tags.tsv.gz
+  Parsing ./stacks45.Mn8/G41.snps.tsv.gz
+  Parsing ./stacks45.Mn8/G41.alleles.tsv.gz
+Searching for sequence matches...
+77708 sample loci compared against the catalog containing 635201 loci.
+  30995 matching loci, 165 contained no verified haplotypes.
+  4 loci matched more than one catalog locus and were excluded.
+  161 loci contained SNPs unaccounted for in the catalog and were excluded.
+  33886 total haplotypes examined from matching loci, 33687 verified.
+Searching for gapped alignments...
+Out of 77708 query loci, 46878 gapped alignments attempted.
+  41581 loci matched one catalog locus; 62641 total haplotypes examined, 52728 verified.
+  5297 loci matched no catalog locus;
+    269 loci matched more than one catalog locus and were excluded.
+    573 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/G41.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/D946' [28 of 38]
+  Parsing ./stacks45.Mn8/D946.tags.tsv.gz
+  Parsing ./stacks45.Mn8/D946.snps.tsv.gz
+  Parsing ./stacks45.Mn8/D946.alleles.tsv.gz
+Searching for sequence matches...
+106833 sample loci compared against the catalog containing 635201 loci.
+  41827 matching loci, 216 contained no verified haplotypes.
+  7 loci matched more than one catalog locus and were excluded.
+  209 loci contained SNPs unaccounted for in the catalog and were excluded.
+  44499 total haplotypes examined from matching loci, 44211 verified.
+Searching for gapped alignments...
+Out of 106833 query loci, 65222 gapped alignments attempted.
+  60298 loci matched one catalog locus; 78421 total haplotypes examined, 68853 verified.
+  4924 loci matched no catalog locus;
+    292 loci matched more than one catalog locus and were excluded.
+    553 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/D946.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/AZ26' [29 of 38]
+  Parsing ./stacks45.Mn8/AZ26.tags.tsv.gz
+  Parsing ./stacks45.Mn8/AZ26.snps.tsv.gz
+  Parsing ./stacks45.Mn8/AZ26.alleles.tsv.gz
+Searching for sequence matches...
+73192 sample loci compared against the catalog containing 635201 loci.
+  26090 matching loci, 244 contained no verified haplotypes.
+  3 loci matched more than one catalog locus and were excluded.
+  241 loci contained SNPs unaccounted for in the catalog and were excluded.
+  29934 total haplotypes examined from matching loci, 29646 verified.
+Searching for gapped alignments...
+Out of 73192 query loci, 47346 gapped alignments attempted.
+  42096 loci matched one catalog locus; 70121 total haplotypes examined, 59525 verified.
+  5250 loci matched no catalog locus;
+    396 loci matched more than one catalog locus and were excluded.
+    644 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/AZ26.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/RK2' [30 of 38]
+  Parsing ./stacks45.Mn8/RK2.tags.tsv.gz
+  Parsing ./stacks45.Mn8/RK2.snps.tsv.gz
+  Parsing ./stacks45.Mn8/RK2.alleles.tsv.gz
+Searching for sequence matches...
+102556 sample loci compared against the catalog containing 635201 loci.
+  39465 matching loci, 252 contained no verified haplotypes.
+  7 loci matched more than one catalog locus and were excluded.
+  246 loci contained SNPs unaccounted for in the catalog and were excluded.
+  42883 total haplotypes examined from matching loci, 42554 verified.
+Searching for gapped alignments...
+Out of 102556 query loci, 63344 gapped alignments attempted.
+  58556 loci matched one catalog locus; 78702 total haplotypes examined, 69188 verified.
+  4788 loci matched no catalog locus;
+    282 loci matched more than one catalog locus and were excluded.
+    626 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/RK2.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/326' [31 of 38]
+  Parsing ./stacks45.Mn8/326.tags.tsv.gz
+  Parsing ./stacks45.Mn8/326.snps.tsv.gz
+  Parsing ./stacks45.Mn8/326.alleles.tsv.gz
+Searching for sequence matches...
+118254 sample loci compared against the catalog containing 635201 loci.
+  51713 matching loci, 208 contained no verified haplotypes.
+  2 loci matched more than one catalog locus and were excluded.
+  206 loci contained SNPs unaccounted for in the catalog and were excluded.
+  58215 total haplotypes examined from matching loci, 57959 verified.
+Searching for gapped alignments...
+Out of 118254 query loci, 66749 gapped alignments attempted.
+  59177 loci matched one catalog locus; 95041 total haplotypes examined, 80342 verified.
+  7572 loci matched no catalog locus;
+    412 loci matched more than one catalog locus and were excluded.
+    721 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/326.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/386' [32 of 38]
+  Parsing ./stacks45.Mn8/386.tags.tsv.gz
+  Parsing ./stacks45.Mn8/386.snps.tsv.gz
+  Parsing ./stacks45.Mn8/386.alleles.tsv.gz
+Searching for sequence matches...
+71649 sample loci compared against the catalog containing 635201 loci.
+  28347 matching loci, 137 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  136 loci contained SNPs unaccounted for in the catalog and were excluded.
+  31755 total haplotypes examined from matching loci, 31589 verified.
+Searching for gapped alignments...
+Out of 71649 query loci, 43439 gapped alignments attempted.
+  39131 loci matched one catalog locus; 59860 total haplotypes examined, 51323 verified.
+  4308 loci matched no catalog locus;
+    231 loci matched more than one catalog locus and were excluded.
+    407 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/386.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/G448' [33 of 38]
+  Parsing ./stacks45.Mn8/G448.tags.tsv.gz
+  Parsing ./stacks45.Mn8/G448.snps.tsv.gz
+  Parsing ./stacks45.Mn8/G448.alleles.tsv.gz
+Searching for sequence matches...
+124548 sample loci compared against the catalog containing 635201 loci.
+  51095 matching loci, 195 contained no verified haplotypes.
+  6 loci matched more than one catalog locus and were excluded.
+  189 loci contained SNPs unaccounted for in the catalog and were excluded.
+  56523 total haplotypes examined from matching loci, 56275 verified.
+Searching for gapped alignments...
+Out of 124548 query loci, 73648 gapped alignments attempted.
+  68179 loci matched one catalog locus; 94372 total haplotypes examined, 83777 verified.
+  5469 loci matched no catalog locus;
+    303 loci matched more than one catalog locus and were excluded.
+    555 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/G448.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/GA237' [34 of 38]
+  Parsing ./stacks45.Mn8/GA237.tags.tsv.gz
+  Parsing ./stacks45.Mn8/GA237.snps.tsv.gz
+  Parsing ./stacks45.Mn8/GA237.alleles.tsv.gz
+Searching for sequence matches...
+149681 sample loci compared against the catalog containing 635201 loci.
+  66560 matching loci, 182 contained no verified haplotypes.
+  5 loci matched more than one catalog locus and were excluded.
+  177 loci contained SNPs unaccounted for in the catalog and were excluded.
+  76321 total haplotypes examined from matching loci, 76098 verified.
+Searching for gapped alignments...
+Out of 149681 query loci, 83303 gapped alignments attempted.
+  77277 loci matched one catalog locus; 112381 total haplotypes examined, 100421 verified.
+  6026 loci matched no catalog locus;
+    324 loci matched more than one catalog locus and were excluded.
+    587 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/GA237.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/TA144' [35 of 38]
+  Parsing ./stacks45.Mn8/TA144.tags.tsv.gz
+  Parsing ./stacks45.Mn8/TA144.snps.tsv.gz
+  Parsing ./stacks45.Mn8/TA144.alleles.tsv.gz
+Searching for sequence matches...
+139584 sample loci compared against the catalog containing 635201 loci.
+  61823 matching loci, 151 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  150 loci contained SNPs unaccounted for in the catalog and were excluded.
+  70330 total haplotypes examined from matching loci, 70157 verified.
+Searching for gapped alignments...
+Out of 139584 query loci, 77912 gapped alignments attempted.
+  73154 loci matched one catalog locus; 103716 total haplotypes examined, 93759 verified.
+  4758 loci matched no catalog locus;
+    267 loci matched more than one catalog locus and were excluded.
+    481 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/TA144.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/TA145' [36 of 38]
+  Parsing ./stacks45.Mn8/TA145.tags.tsv.gz
+  Parsing ./stacks45.Mn8/TA145.snps.tsv.gz
+  Parsing ./stacks45.Mn8/TA145.alleles.tsv.gz
+Searching for sequence matches...
+131115 sample loci compared against the catalog containing 635201 loci.
+  56167 matching loci, 78 contained no verified haplotypes.
+  2 loci matched more than one catalog locus and were excluded.
+  76 loci contained SNPs unaccounted for in the catalog and were excluded.
+  64142 total haplotypes examined from matching loci, 64045 verified.
+Searching for gapped alignments...
+Out of 131115 query loci, 75026 gapped alignments attempted.
+  71446 loci matched one catalog locus; 99975 total haplotypes examined, 92261 verified.
+  3580 loci matched no catalog locus;
+    202 loci matched more than one catalog locus and were excluded.
+    363 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/TA145.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/Fish684' [37 of 38]
+  Parsing ./stacks45.Mn8/Fish684.tags.tsv.gz
+  Parsing ./stacks45.Mn8/Fish684.snps.tsv.gz
+  Parsing ./stacks45.Mn8/Fish684.alleles.tsv.gz
+Searching for sequence matches...
+116649 sample loci compared against the catalog containing 635201 loci.
+  49220 matching loci, 76 contained no verified haplotypes.
+  4 loci matched more than one catalog locus and were excluded.
+  72 loci contained SNPs unaccounted for in the catalog and were excluded.
+  52832 total haplotypes examined from matching loci, 52724 verified.
+Searching for gapped alignments...
+Out of 116649 query loci, 67505 gapped alignments attempted.
+  65181 loci matched one catalog locus; 79812 total haplotypes examined, 74814 verified.
+  2324 loci matched no catalog locus;
+    161 loci matched more than one catalog locus and were excluded.
+    219 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/Fish684.matches.tsv.gz
+
+Processing sample './stacks45.Mn8/Fish698' [38 of 38]
+  Parsing ./stacks45.Mn8/Fish698.tags.tsv.gz
+  Parsing ./stacks45.Mn8/Fish698.snps.tsv.gz
+  Parsing ./stacks45.Mn8/Fish698.alleles.tsv.gz
+Searching for sequence matches...
+135235 sample loci compared against the catalog containing 635201 loci.
+  62426 matching loci, 2 contained no verified haplotypes.
+  1 loci matched more than one catalog locus and were excluded.
+  1 loci contained SNPs unaccounted for in the catalog and were excluded.
+  68088 total haplotypes examined from matching loci, 68086 verified.
+Searching for gapped alignments...
+Out of 135235 query loci, 72811 gapped alignments attempted.
+  71078 loci matched one catalog locus; 86175 total haplotypes examined, 82657 verified.
+  1733 loci matched no catalog locus;
+    109 loci matched more than one catalog locus and were excluded.
+    117 loci contained SNPs unaccounted for in the catalog and were excluded.
+    0 loci had no verified haplotypes.
+    0 loci had inconsistent alignments to a catalog locus and were excluded.
+Outputing to file ./stacks45.Mn8/Fish698.matches.tsv.gz
+
+sstacks is done.
+
+tsv2bam
+==========
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/tsv2bam -P ./stacks45.Mn8  -M ../info/test_popmap.tsv -t 30 -R ../../Rutilus/
+
+Logging to './stacks45.Mn8/tsv2bam.log'.
+Configuration for this run:
+  Stacks directory: './stacks45.Mn8/'
+  Population map: '../info/test_popmap.tsv'
+  Num. samples: 38
+  Paired-end reads directory: '../../Rutilus/'
+  Multithreaded.
+
+Paired-end reads files found, e.g. '../../Rutilus/RUAU2.2.fq.gz'.
+Loading the catalog...
+Processing sample 'RUAU2'...
+Processing sample 'RUAU4'...
+Processing sample 'D2173'...
+Processing sample 'D2174'...
+Processing sample 'V2'...
+Processing sample 'RUSP1'...
+Processing sample '1197B'...
+Processing sample 'GB15'...
+Processing sample 'D283'...
+Processing sample 'RUOH1'...
+Processing sample 'GA128'...
+Processing sample 'C46'...
+Processing sample 'RUBA3'...
+Processing sample '1197C'...
+Processing sample 'D282'...
+Processing sample 'D946'...
+Processing sample 'AZ26'...
+Processing sample 'RURU4'...
+Processing sample 'AR50'...
+Processing sample 'RUBA4'...
+Processing sample 'RURU3'...
+Processing sample 'D2075'...
+Processing sample 'RUOH2'...
+Processing sample 'D2073'...
+Processing sample 'D2019'...
+Processing sample 'AR24'...
+Processing sample 'RK2'...
+Processing sample 'AZ12'...
+Processing sample 'C47'...
+Processing sample 'G41'...
+Processing sample '326'...
+Processing sample '386'...
+Processing sample 'G448'...
+Processing sample 'GA237'...
+Processing sample 'TA144'...
+Processing sample 'TA145'...
+Processing sample 'Fish684'...
+Processing sample 'Fish698'...
+
+Sample 'RUAU2': matched 103699 sample loci to 101447 catalog loci; found a paired-end read for 895219 (100.0%) of the assembled forward reads; wrote 1790438 records.
+Sample 'RUAU4': matched 99958 sample loci to 91657 catalog loci; found a paired-end read for 2922213 (100.0%) of the assembled forward reads; wrote 5844426 records.
+Sample 'RUOH1': matched 42587 sample loci to 41345 catalog loci; found a paired-end read for 611533 (100.0%) of the assembled forward reads; wrote 1223066 records.
+Sample 'RUOH2': matched 38404 sample loci to 37527 catalog loci; found a paired-end read for 528349 (100.0%) of the assembled forward reads; wrote 1056698 records.
+Sample 'D2173': matched 94462 sample loci to 92593 catalog loci; found a paired-end read for 1269237 (100.0%) of the assembled forward reads; wrote 2538474 records.
+Sample 'D2174': matched 53757 sample loci to 51637 catalog loci; found a paired-end read for 1333225 (100.0%) of the assembled forward reads; wrote 2666450 records.
+Sample '1197B': matched 54223 sample loci to 53760 catalog loci; found a paired-end read for 333458 (100.0%) of the assembled forward reads; wrote 666916 records.
+Sample '1197C': matched 40572 sample loci to 40310 catalog loci; found a paired-end read for 200937 (100.0%) of the assembled forward reads; wrote 401874 records.
+Sample 'D282': matched 49182 sample loci to 47826 catalog loci; found a paired-end read for 771779 (100.0%) of the assembled forward reads; wrote 1543558 records.
+Sample 'D283': matched 77579 sample loci to 73735 catalog loci; found a paired-end read for 1507837 (100.0%) of the assembled forward reads; wrote 3015674 records.
+Sample 'RURU3': matched 132374 sample loci to 120512 catalog loci; found a paired-end read for 4978855 (100.0%) of the assembled forward reads; wrote 9957710 records.
+Sample 'RURU4': matched 118308 sample loci to 109646 catalog loci; found a paired-end read for 3856286 (100.0%) of the assembled forward reads; wrote 7712572 records.
+Sample 'GB15': matched 128753 sample loci to 125825 catalog loci; found a paired-end read for 2681840 (100.0%) of the assembled forward reads; wrote 5363680 records.
+Sample 'V2': matched 127842 sample loci to 123398 catalog loci; found a paired-end read for 2414833 (100.0%) of the assembled forward reads; wrote 4829666 records.
+Sample 'AR24': matched 130434 sample loci to 127262 catalog loci; found a paired-end read for 2808128 (100.0%) of the assembled forward reads; wrote 5616256 records.
+Sample 'AR50': matched 86751 sample loci to 82736 catalog loci; found a paired-end read for 2950572 (100.0%) of the assembled forward reads; wrote 5901144 records.
+Sample 'D2019': matched 45328 sample loci to 44147 catalog loci; found a paired-end read for 1130820 (100.0%) of the assembled forward reads; wrote 2261640 records.
+Sample 'RUSP1': matched 98957 sample loci to 97649 catalog loci; found a paired-end read for 658235 (100.0%) of the assembled forward reads; wrote 1316470 records.
+Sample 'GA128': matched 92920 sample loci to 85048 catalog loci; found a paired-end read for 2208193 (100.0%) of the assembled forward reads; wrote 4416386 records.
+Sample 'C46': matched 39275 sample loci to 38140 catalog loci; found a paired-end read for 576227 (100.0%) of the assembled forward reads; wrote 1152454 records.
+Sample 'C47': matched 59084 sample loci to 56569 catalog loci; found a paired-end read for 1980080 (100.0%) of the assembled forward reads; wrote 3960160 records.
+Sample 'RUBA3': matched 63589 sample loci to 60314 catalog loci; found a paired-end read for 1735776 (100.0%) of the assembled forward reads; wrote 3471552 records.
+Sample 'RUBA4': matched 100945 sample loci to 92289 catalog loci; found a paired-end read for 3556948 (100.0%) of the assembled forward reads; wrote 7113896 records.
+Sample 'D2073': matched 23477 sample loci to 23189 catalog loci; found a paired-end read for 206970 (100.0%) of the assembled forward reads; wrote 413940 records.
+Sample 'D2075': matched 35983 sample loci to 35251 catalog loci; found a paired-end read for 605636 (100.0%) of the assembled forward reads; wrote 1211272 records.
+Sample 'AZ12': matched 122032 sample loci to 110943 catalog loci; found a paired-end read for 3479689 (100.0%) of the assembled forward reads; wrote 6959378 records.
+Sample 'G41': matched 72222 sample loci to 69674 catalog loci; found a paired-end read for 2579209 (100.0%) of the assembled forward reads; wrote 5158418 records.
+Sample 'D946': matched 101536 sample loci to 99709 catalog loci; found a paired-end read for 1687936 (100.0%) of the assembled forward reads; wrote 3375872 records.
+Sample 'AZ26': matched 67739 sample loci to 63988 catalog loci; found a paired-end read for 1775713 (100.0%) of the assembled forward reads; wrote 3551426 records.
+Sample 'RK2': matched 97410 sample loci to 95459 catalog loci; found a paired-end read for 1288687 (100.0%) of the assembled forward reads; wrote 2577374 records.
+Sample '326': matched 110357 sample loci to 102407 catalog loci; found a paired-end read for 3514830 (100.0%) of the assembled forward reads; wrote 7029660 records.
+Sample '386': matched 67123 sample loci to 64063 catalog loci; found a paired-end read for 2462964 (100.0%) of the assembled forward reads; wrote 4925928 records.
+Sample 'G448': matched 118764 sample loci to 115968 catalog loci; found a paired-end read for 3208225 (100.0%) of the assembled forward reads; wrote 6416450 records.
+Sample 'GA237': matched 143296 sample loci to 138002 catalog loci; found a paired-end read for 4244611 (100.0%) of the assembled forward reads; wrote 8489222 records.
+Sample 'TA144': matched 134454 sample loci to 130726 catalog loci; found a paired-end read for 3397091 (100.0%) of the assembled forward reads; wrote 6794182 records.
+Sample 'TA145': matched 127146 sample loci to 123377 catalog loci; found a paired-end read for 3049848 (100.0%) of the assembled forward reads; wrote 6099696 records.
+Sample 'Fish684': matched 113864 sample loci to 111249 catalog loci; found a paired-end read for 2337712 (100.0%) of the assembled forward reads; wrote 4675424 records.
+Sample 'Fish698': matched 132959 sample loci to 129191 catalog loci; found a paired-end read for 3199452 (100.0%) of the assembled forward reads; wrote 6398904 records.
+
+tsv2bam is done.
+
+gstacks
+==========
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/gstacks -P ./stacks45.Mn8 -M ../info/test_popmap.tsv -t 30
+
+Logging to './stacks45.Mn8/gstacks.log'.
+Locus/sample distributions will be written to './stacks45.Mn8/gstacks.log.distribs'.
+
+Configuration for this run:
+  Input mode: denovo
+  Population map: '../info/test_popmap.tsv'
+  Input files: 38, e.g. './stacks45.Mn8/RUAU2.matches.bam'
+  Output to: './stacks45.Mn8/'
+  Model: marukilow (var_alpha: 0.01, gt_alpha: 0.05)
+
+Reading BAM headers...
+Processing all loci...
+1%...
+2%...
+5%...
+10%...
+20%...
+50%...
+100%
+
+Attempted to assemble and align paired-end reads for 631980 loci:
+  0 loci had no or almost no paired-end reads (0.0%);
+  18203 loci had paired-end reads that couldn't be assembled into a contig (2.9%);
+  For the remaining 613777 loci (97.1%), a paired-end contig was assembled;
+    Average contig size was 263.9 bp;
+  208923 paired-end contigs overlapped the forward region (34.0%)
+    Mean overlap: 25.7bp; mean size of overlapped loci after merging: 238.3;
+  Out of 152824530 paired-end reads in these loci (mean 244.5 reads per locus),
+    150054261 were successfuly aligned (98.2%);
+  Mean insert length was 262.1, stdev: 31.6 (based on aligned reads in overlapped loci).
+
+Genotyped 613735 loci:
+  effective per-sample coverage: mean=34.9x, stdev=17.7x, min=5.4x, max=70.7x
+  mean number of sites per locus: 254.6
+  a consistent phasing was found for 440769 of out 707340 (62.3%) diploid loci needing phasing
+
+gstacks is done.
+
+populations
+==========
+/mnt/nfs/clustersw/Debian/buster/stacks/2.59/bin/populations -P ./stacks45.Mn8 -M ../info/test_popmap.tsv -t 30
+
+Logging to './stacks45.Mn8/populations.log'.
+Locus/sample distributions will be written to './stacks45.Mn8/populations.log.distribs'.
+populations parameters selected:
+  Percent samples limit per population: 0
+  Locus Population limit: 1
+  Percent samples overall: 0
+  Minor allele frequency cutoff: 0
+  Maximum observed heterozygosity cutoff: 1
+  Applying Fst correction: none.
+  Pi/Fis kernel smoothing: off
+  Fstats kernel smoothing: off
+  Bootstrap resampling: off
+
+Parsing population map...
+The population map contained 38 samples, 20 population(s), 1 group(s).
+Working on 38 samples.
+Working on 20 population(s):
+    1: RUAU2, RUAU4
+    10: RUOH1, RUOH2
+    11: D2173, D2174
+    12: 1197B, 1197C
+    13: D282, D283
+    14: RURU3, RURU4
+    15: GB15, V2
+    16: AR24, AR50
+    17: D2019, RUSP1
+    18: GA128
+    19: C46, C47
+    2: RUBA3, RUBA4
+    20: D2073, D2075
+    3: AZ12, G41
+    4: D946
+    5: AZ26, RK2
+    6: 326, 386
+    7: G448, GA237
+    8: TA144, TA145
+    9: Fish684, Fish698
+Working on 1 group(s) of populations:
+    defaultgrp: 1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 3, 4, 5, 6, 7, 8, 9
+
+Raw haplotypes will be written to './stacks45.Mn8/populations.haplotypes.tsv'
+Population-level summary statistics will be written to './stacks45.Mn8/populations.sumstats.tsv'
+Population-level haplotype summary statistics will be written to './stacks45.Mn8/populations.hapstats.tsv'
+
+Processing data in batches:
+  * load a batch of catalog loci and apply filters
+  * compute SNP- and haplotype-wise per-population statistics
+  * write the above statistics in the output files
+  * export the genotypes/haplotypes in specified format(s)
+More details in './stacks45.Mn8/populations.log.distribs'.
+Now processing...
+Batch 1 
+Batch 2 
+Batch 3 
+Batch 4 
+Batch 5 
+Batch 6 
+Batch 7 
+Batch 8 
+Batch 9 
+Batch 10 
+Batch 11 
+Batch 12 
+Batch 13 
+Batch 14 
+Batch 15 
+Batch 16 
+Batch 17 
+Batch 18 
+Batch 19 
+Batch 20 
+Batch 21 
+Batch 22 
+Batch 23 
+Batch 24 
+Batch 25 
+Batch 26 
+Batch 27 
+Batch 28 
+Batch 29 
+Batch 30 
+Batch 31 
+Batch 32 
+Batch 33 
+Batch 34 
+Batch 35 
+Batch 36 
+Batch 37 
+Batch 38 
+Batch 39 
+Batch 40 
+Batch 41 
+Batch 42 
+Batch 43 
+Batch 44 
+Batch 45 
+Batch 46 
+Batch 47 
+Batch 48 
+Batch 49 
+Batch 50 
+Batch 51 
+Batch 52 
+Batch 53 
+Batch 54 
+Batch 55 
+Batch 56 
+Batch 57 
+Batch 58 
+Batch 59 
+Batch 60 
+Batch 61 
+Batch 62 
+
+Removed 0 loci that did not pass sample/population constraints from 613735 loci.
+Kept 613735 loci, composed of 161978263 sites; 49 of those sites were filtered, 1449700 variant sites remained.
+Number of loci with PE contig: 605133.00 (98.6%);
+  Mean length of loci: 255.69bp (stderr 0.05);
+Number of loci with SE/PE overlap: 208920.00 (34.0%);
+  Mean length of overlapping loci: 238.09bp (stderr 0.06); mean overlap: 25.68bp (stderr 0.01);
+Mean genotyped sites per locus: 254.57bp (stderr 0.06).
+
+Population summary statistics (more detail in populations.sumstats_summary.tsv):
+  1: 1.3947 samples per locus; pi: 0.1623; all/variant/polymorphic sites: 37990627/804789/153700; private alleles: 42758
+  10: 1.2236 samples per locus; pi: 0.11701; all/variant/polymorphic sites: 17447388/454580/59570; private alleles: 15656
+  11: 1.3715 samples per locus; pi: 0.11698; all/variant/polymorphic sites: 29472605/737792/103227; private alleles: 49185
+  12: 1.4876 samples per locus; pi: 0.080781; all/variant/polymorphic sites: 17183849/494054/50354; private alleles: 42528
+  13: 1.4891 samples per locus; pi: 0.12606; all/variant/polymorphic sites: 22924957/525322/80010; private alleles: 18158
+  14: 1.5535 samples per locus; pi: 0.13415; all/variant/polymorphic sites: 40696726/761595/127176; private alleles: 42477
+  15: 1.5884 samples per locus; pi: 0.12168; all/variant/polymorphic sites: 45144000/983440/172879; private alleles: 69033
+  16: 1.3514 samples per locus; pi: 0.092766; all/variant/polymorphic sites: 43603046/916120/104602; private alleles: 47486
+  17: 1.3822 samples per locus; pi: 0.11619; all/variant/polymorphic sites: 29503544/614545/85884; private alleles: 35223
+  18: 1 samples per locus; pi: 0.11407; all/variant/polymorphic sites: 22989665/467368/53315; private alleles: 8824
+  19: 1.265 samples per locus; pi: 0.10266; all/variant/polymorphic sites: 20058920/536843/63192; private alleles: 22598
+  2: 1.316 samples per locus; pi: 0.11546; all/variant/polymorphic sites: 31954894/658892/88283; private alleles: 30444
+  20: 1.4789 samples per locus; pi: 0.10214; all/variant/polymorphic sites: 11055248/320524/41088; private alleles: 11340
+  3: 1.3774 samples per locus; pi: 0.12326; all/variant/polymorphic sites: 36566881/733952/110874; private alleles: 23718
+  4: 1 samples per locus; pi: 0.064482; all/variant/polymorphic sites: 26442684/696068/44884; private alleles: 20063
+  5: 1.3313 samples per locus; pi: 0.10499; all/variant/polymorphic sites: 33279700/809049/102274; private alleles: 27368
+  6: 1.3605 samples per locus; pi: 0.10855; all/variant/polymorphic sites: 34550417/700591/95178; private alleles: 24779
+  7: 1.6666 samples per locus; pi: 0.10431; all/variant/polymorphic sites: 42647674/970197/147226; private alleles: 53629
+  8: 1.7007 samples per locus; pi: 0.10382; all/variant/polymorphic sites: 42010723/945268/147056; private alleles: 63429
+  9: 1.761 samples per locus; pi: 0.061049; all/variant/polymorphic sites: 38312917/869736/74331; private alleles: 42945
+Populations is done.
+denovo_map.pl is done.
+
+denovo_map.pl completed at 2021-12-20 13:49:44
